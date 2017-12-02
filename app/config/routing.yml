@@ -1,0 +1,42 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+frontpage:
+    path: /
+    defaults: { _controller: AppBundle:Default:frontpage }
+
+login:
+    path: /game/login
+    defaults: { _controller: AppBundle:Security:login }
+logout:
+    path: /logout
+
+game_landing:
+    path: /game
+    defaults: { _controller: AppBundle:Game:landing }
+
+user_index:
+    path: /game/users
+    defaults: { _controller: AppBundle:User:index }
+user_show:
+    path: /game/user/{id}
+    defaults: { _controller: AppBundle:User:show }
+    requirements:
+        id: \d+
+user_register:
+    path: /game/user/register
+    defaults: { _controller: AppBundle:User:register }
+    methods: [GET]
+user_create:
+    path: /game/user/register
+    defaults: { _controller: AppBundle:User:create }
+    methods: [POST]
+user_edit:
+    path: /game/user/update/{id}
+    defaults: { _controller: AppBundle:User:edit }
+    methods: [GET]
+user_update:
+    path: /game/user/update/{id}
+    defaults: { _controller: AppBundle:User:update }
+    methods: [POST]

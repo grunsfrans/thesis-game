@@ -1,0 +1,111 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+    <section class="hero is-info ">
+        <div class="hero-head">
+            <div class="navbar">
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="title">
+                Aanmelden
+            </div>
+            <div class="subtitle">
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <form class="control">
+                <div class="columns">
+                    <div class="column is-half">
+                        <fieldset>
+                            <legend>Wie ben je?</legend>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" name="first_name" type="text" placeholder="voornaam"/>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" name="last-name" type="text" placeholder="achternaam"/>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field has-addons">
+                                        <div class="control has-icons-left is-expanded">
+                                            <input id="datepicker" class="input" name="dob" type="date" placeholder="geboortedatum"/>
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fa-birthday-cake"></i>
+                                            </span>
+                                        </div>
+                                        <p class="control">
+                                            <a class="button is-static">
+                                                <i class="fa fa-calendar"></i>
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control has-icons-left is-expanded">
+                                            <div class="select is-fullwidth">
+                                                <select name="gender" >
+                                                    <option value="0">man</option>
+                                                    <option value="1">vrouw</option>
+                                                    <option value="2">anders</option>
+                                                </select>
+                                            </div>
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fa-venus-mars"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Inloggegevens</legend>
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" name="email" type="email" placeholder="e-mail"/>
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-at"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" name="username" type="text" placeholder="gebruikersnaam"/>
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" name="password" type="password" placeholder="wachtwoord"/>
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-unlock-alt"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input class="input" name="password_check" type="password" placeholder="achtwoord (herhaal)"/>
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-unlock-alt"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </section>
+
+
+{% endblock %}

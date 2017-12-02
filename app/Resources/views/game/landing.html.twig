@@ -1,0 +1,49 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <section class="hero is-warning is-bold ">
+        <div class="hero-head">
+            <div class="navbar">
+                <div id="navbarMenuHeroA" class="navbar-menu">
+                    {% if app.user %}
+                        <div class="navbar-end">
+                            <a class="navbar-item" href="{{ path('logout') }}">
+                                Log uit
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="title">
+                SpellCheck
+            </div>
+            <div class="subtitle">
+            </div>
+        </div>
+
+    </section>
+   <section class="section">
+       <div class="container">
+           <div class="columns">
+               <div class="column is-three-quarters">
+
+               </div>
+               <div class="column">
+                   {% if app.user %}
+                       Welkom terug {{ app.user.userprofile.firstname }}
+                       <a class="button" href="{{ path('logout') }}">Logout</a>
+                   {% else %}
+                       {{ render(controller('AppBundle:Security:login')) }}
+                   {% endif %}
+               </div>
+           </div>
+
+       </div>
+
+    </section>
+
+
+{% endblock %}
+

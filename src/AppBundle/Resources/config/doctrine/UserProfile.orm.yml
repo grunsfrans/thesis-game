@@ -1,0 +1,23 @@
+AppBundle\Entity\UserProfile:
+    type: entity
+    table: 'user_profile'
+    id:
+        id:
+            type: bigint
+            generator: { strategy: AUTO }
+
+#    oneToOne:
+#        userProfile:
+#            targetEntity: UserProfile
+#            mappedBy: userId
+    fields:
+        firstName:
+            type: string
+            length: 25
+            name: first_name
+        lastName:
+            type: string
+            length: 50
+            name: last_name
+        age:
+            type: integer

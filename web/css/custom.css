@@ -1,0 +1,14 @@
+.form-title{
+    font-size: large;
+    padding-top: 15px;
+}
+
+legend{
+    font-size: 1.2em;
+}
+
+fieldset{
+    border:0px;
+    padding-top: 5px;
+    margin-bottom: 25px;
+}

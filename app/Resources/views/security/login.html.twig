@@ -1,0 +1,39 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <div class="columns">
+        <div class="column">
+            {% if error %}
+                <div class="notification is-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            <h3 class="title">
+                Inloggen
+            </h3>
+            <hr>
+            <form action="{{ path('login') }}" method="post">
+                <div class="field">
+                    <label class="label" for="username">Gebruiker:</label>
+                    <input class="input" type="text" id="username" name="_username" value="{{ last_username }}" />
+                </div>
+
+                <div class="field">
+                    <label class="label" for="password">Wachtwoord:</label>
+                    <input class="input" type="password" id="password" name="_password" />
+                </div>
+
+
+                <input type="hidden" name="_target_path" value="/game" />
+                <div class="control">
+                    <a class="button is-primary" href="{{ path('user_register') }}" >registeren</a>
+                    <button class="button is-info is-pulled-right" type="submit">login</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+
