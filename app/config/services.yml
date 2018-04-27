@@ -29,6 +29,12 @@ services:
         public: true
         tags: ['controller.service_arguments']
 
+    word_service:
+        class: AppBundle\Service\WordService
+        public: true
+        arguments:
+                $entityManager: "@doctrine.orm.entity_manager"
+
     # add more services, or override services that need manual wiring
     # AppBundle\Service\ExampleService:
     #     arguments:

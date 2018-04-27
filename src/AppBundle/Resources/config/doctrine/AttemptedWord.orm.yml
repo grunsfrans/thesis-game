@@ -1,0 +1,35 @@
+AppBundle\Entity\AttemptedWord:
+    type: entity
+    table: 'attempted_word'
+    id:
+        id:
+            type: bigint
+            generator: { strategy: AUTO }
+
+    oneToOne:
+        word:
+            targetEntity: Word
+            joinColumn:
+                name: word
+                referencedColumnName: id
+
+    manyToOne:
+        student:
+            targetEntity: Student
+            inversedBy: attemptedWords
+            joinColumn:
+                name: student
+                referencedColumnName: id
+
+    fields:
+        reactiontime:
+            type: integer
+        skipped:
+            type: boolean
+            default: 0
+        helped:
+            type: boolean
+            default: 0
+        incorrect:
+            type: boolean
+            default: 0

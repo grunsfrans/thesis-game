@@ -19,5 +19,7 @@ AppBundle\Entity\UserProfile:
             type: string
             length: 50
             name: last_name
-        age:
+        dob:
+            type: string
+        gender:
             type: integer

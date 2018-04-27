@@ -25,6 +25,13 @@ AppBundle\Entity\User:
     oneToOne:
         userProfile:
             targetEntity: UserProfile
+            cascade: ["persist"]
             joinColumn:
                 name: user_profile
+                referencedColumnName: id
+        student:
+            targetEntity: Student
+            cascade: ["persist"]
+            joinColumn:
+                name: student_id
                 referencedColumnName: id

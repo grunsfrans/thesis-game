@@ -1,14 +1,14 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}
-    <section class="hero is-warning is-bold ">
+    <section class="hero is-warning is-bold is-small ">
         <div class="hero-head">
             <div class="navbar">
                 <div id="navbarMenuHeroA" class="navbar-menu">
                     {% if app.user %}
                         <div class="navbar-end">
                             <a class="navbar-item" href="{{ path('logout') }}">
-                                Log uit
+                                uitloggen
                             </a>
                         </div>
                     {% endif %}
@@ -25,15 +25,20 @@
 
     </section>
    <section class="section">
-       <div class="container">
+       <div class="container ">
            <div class="columns">
-               <div class="column is-three-quarters">
-
-               </div>
-               <div class="column">
+               <div class="column is-12 has-text-centered">
                    {% if app.user %}
                        Welkom terug {{ app.user.userprofile.firstname }}
-                       <a class="button" href="{{ path('logout') }}">Logout</a>
+                       <div class="button-list-vertical is-centered">
+                           <a class="button is-warning is-large" href="{{ path('game_new') }}">nieuw spel</a>
+                           {% if load_btn %}
+                                <a class="button is-success is-large" href="{{ path('game_play') }}" >speel verder</a>
+                           {% endif %}
+                           <a class="button is-info is-large" href="{{ path('user_show',{'id': app.user.id }) }}">jouw gegevens</a>
+                           <a class="button is-dark is-large" href="{{ path('logout') }}">uitloggen</a>
+                       </div>
+
                    {% else %}
                        {{ render(controller('AppBundle:Security:login')) }}
                    {% endif %}
@@ -43,7 +48,6 @@
        </div>
 
     </section>
-
 
 {% endblock %}
 

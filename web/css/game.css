@@ -1,0 +1,206 @@
+body{
+    background: #e9e9e9;
+}
+
+#game-scores {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, whitesmoke 0%, #ddd 50%, whitesmoke 100%) 27;
+    background: linear-gradient(to right, #e9e9e9 0%, white 50%, #e9e9e9 100%);
+    margin-top: -6px;
+    box-sizing: border-box;
+    line-height: 50px;
+    font-size: 16px;
+}
+
+.level-title{
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.level-msg{
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.level-msg.show{
+    opacity: 1;
+}
+.level-msg.pos{
+    color: #23d160;
+}
+.level-msg.neg{
+    color: #ff3860;
+}
+
+img.tutor{
+    transform: scaleX(-1);
+    height: 250px;
+    margin-left: -50%;
+    margin-top: -25px;
+}
+
+.game-level {
+    position: relative;
+    padding: 10px;
+}
+#game-main{
+    position: relative;
+}
+#tutor-response{
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    width: 60%;
+    height: 75px;
+    line-height: 75px;
+    padding: 0px 10px;
+    background: whitesmoke;
+    z-index: 100;
+    border: 2px solid #209cef;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+}
+#tutor-response:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -2px;
+    top: 43px;
+    border-style: solid;
+    border-width: 30px 0 0 40px;
+    border-color: transparent transparent transparent #209cef;
+}
+#tutor-response:after {
+    position: absolute;
+    font-weight: bold;
+    content: '...';
+    left: 7px;
+    top: 25px;
+    color: whitesmoke;
+    font-size: 12px;
+}
+
+#tutor-response.exclamation:after{ content: '!'; }
+#tutor-response.question:after{ content: '?'; }
+#tutor-response.pos{  border: 2px solid #23d160;  }
+#tutor-response.pos:before{ border-color: transparent transparent transparent #23d160;}
+#tutor-response.neg{  border: 2px solid #ff3860;  }
+#tutor-response.neg:before{ border-color: transparent transparent transparent #ff3860;}
+
+#tutor-response span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#tutor-response-extra{
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    left: 45%;
+    top: 30%;
+    width: 0;
+    height: 0;
+    background: #209cf0;
+    z-index: 100;
+    padding: 7px;
+    padding-left: 25px;
+    border: 2px solid #209cef;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 14px;
+    color: whitesmoke;
+    -webkit-transition: width 0.3s ease-in-out ;
+    -moz-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
+#tutor-response-extra.active{
+    opacity: 1;
+    width: 60%;
+    height: 40px;
+}
+
+#tutor-response-extra:after {
+    position: absolute;
+    font-weight: bold;
+    content: 'i';
+    left: 10px;
+    top: 23%;
+    color: whitesmoke;
+    font-size: 14px;
+}
+
+#tutor-response-extra.exclamation:after{ content: '!'; }
+#tutor-response-extra.question:after{ content: '?'; }
+#tutor-response-extra.pos{  border: 2px solid #23d160; background: #23d160 }
+#tutor-response-extra.neg{  border: 2px solid #ff3860; background: #ff3860 }
+
+
+
+
+
+#word-container{
+    position: relative;
+    background: linear-gradient(to right, #e9e9e9 0%, white 50%, #e9e9e9 100%);
+}
+#word {
+    height: 150px;
+    line-height: 50px;
+    padding: 50px;
+    font-size: 22px;
+    text-align: center;
+}
+#word.correct{
+    color: #23d160;
+}
+#word.incorrect{
+    color: #ff3860;
+}
+#word.altcorrect{
+    color: #209cef;
+}
+
+#game-interactions{
+    height: 33%;
+}
+
+
+.btn-round{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    font-size: 14px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
+
+.btn-round .btn-round-text{
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    bottom: -20px;
+    width: 150%;
+    font-size: 12px;
+    color: #333;
+    -webkit-transition: all 0.1s linear ;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+.btn-round:hover .btn-round-text{
+    opacity: 1;
+}
+
+.btn-round.big{
+    height: 80px;
+    width: 80px;
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+.footer{
+    height: 150px;
+}

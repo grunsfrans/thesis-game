@@ -1,0 +1,16 @@
+AppBundle\Entity\Word:
+    type: entity
+    table: 'word'
+    id:
+        id:
+            type: bigint
+            generator: { strategy: AUTO }
+
+    fields:
+        text:
+            type: string
+            length: 100
+        frequency:
+            type: bigint
+        length:
+            type: integer

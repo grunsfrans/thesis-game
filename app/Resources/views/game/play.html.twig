@@ -1,0 +1,99 @@
+{% extends "::base.html.twig" %}
+
+{% block extracss %}
+    <link rel="stylesheet" href={{ asset("css/game.css") }}>
+{% endblock %}
+
+{% block body %}
+
+   <section class="section">
+       <div class="container ">
+           <div class="columns">
+               <div id="game-main" class="column is-offset-3 is-6 has-text-centered">
+                   <img src='{{ asset("img/tutors/#{random(100)}.png") }}' class="tutor"/>
+                   <div id="tutor-response"><span></span></div>
+                   <div id="tutor-response-extra">info</div>
+                   <div id="game-scores">
+                       <div class="columns">
+                           <div class="column is-6">
+                               <span class="level-title">
+                                   Level
+                               </span>
+                               <span id="level">
+                                   {{ level }}
+                               </span>
+                               <span id="level-msg" class="level-msg">
+                                   +1
+                               </span>
+                           </div>
+                           <div class="column is-6">
+                               <span class="level-title">
+                                   Score
+                               </span>
+                               <span id="score">
+                                   {{ score }}
+                               </span>
+                               <span id="score-msg" class="level-msg">
+                                   +1
+                               </span>
+                           </div>
+                       </div>
+                   </div>
+                   {% if app.user.student.experimental == 1 %}
+                   {% endif %}
+                   {% if app.user %}
+                       {% if app.user.student.experimental == 0 %}
+                           <div id="tutor-response">Welkom terug {{ app.user.userprofile.firstname }}</div>
+                       {% endif %}
+                           <div id="word-container" >
+                               <div id="word">
+                                   Here comes the word
+                               </div>
+                           </div>
+
+
+
+
+                   {% else %}
+                       {{ render(controller('AppBundle:Security:login')) }}
+                   {% endif %}
+
+               </div>
+           </div>
+       </div>
+
+   </section>
+    {% if app.user %}
+        <footer class="footer">
+            <div class="columns">
+                <div class="column is-4 has-text-centered">
+                    <a class="button btn-round is-warning" href="{{ path('game_landing') }}">
+                        <i class="fa fa-arrow-left"></i>
+                        <span class="btn-round-text">
+                            Terug naar menu
+                        </span>
+                    </a>
+                </div>
+                <div id="game-interactions" class="column is-4 has-text-centered">
+                    <button class="button btn-round big is-success" type="button" onclick="nextQuestion()">
+                        <i class="fa fa-play"></i>
+                        <span class="btn-round-text">
+                            Start
+                        </span>
+                    </button>
+                </div>
+                <div class="column is-4 has-text-centered">
+                    <a class="button btn-round is-info" href="{{ path('user_show',{'id': app.user.id }) }}">
+                        <i class="fa fa-user"></i>
+                        <span class="btn-round-text">
+                            Jouw gegevens
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+
+        </footer>
+    {% endif %}
+{% endblock %}
+

@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <section class="hero is-info ">
+    <section class="hero is-info is-small ">
         <div class="hero-head">
             <div class="navbar">
             </div>
@@ -17,26 +17,30 @@
     </section>
     <section class="section">
         <div class="container">
-            <form class="control">
+            {{ form_start(form) }}
+            {#<form class="control" action="{{ path('user_create') }}" method="post">#}
                 <div class="columns">
                     <div class="column is-half">
                         <fieldset>
                             <legend>Wie ben je?</legend>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input" name="first_name" type="text" placeholder="voornaam"/>
+                                    {{ form_widget(form.user_profile.first_name) }}
+                                    {#<input class="input" name="first_name" type="text" placeholder="voornaam"/>#}
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input" name="last-name" type="text" placeholder="achternaam"/>
+                                    {{ form_widget(form.user_profile.last_name) }}
+                                    {#<input class="input" name="last-name" type="text" placeholder="achternaam"/>#}
                                 </div>
                             </div>
                             <div class="field is-horizontal">
                                 <div class="field-body">
                                     <div class="field has-addons">
                                         <div class="control has-icons-left is-expanded">
-                                            <input id="datepicker" class="input" name="dob" type="date" placeholder="geboortedatum"/>
+                                            {{ form_widget(form.user_profile.dob) }}
+                                            {#<input id="datepicker" class="input" name="dob" type="date" placeholder="geboortedatum"/>#}
                                             <span class="icon is-small is-left">
                                                 <i class="fa fa-birthday-cake"></i>
                                             </span>
@@ -50,12 +54,15 @@
                                     <div class="field">
                                         <div class="control has-icons-left is-expanded">
                                             <div class="select is-fullwidth">
-                                                <select name="gender" >
-                                                    <option value="0">man</option>
-                                                    <option value="1">vrouw</option>
-                                                    <option value="2">anders</option>
-                                                </select>
+                                                {{ form_widget(form.user_profile.gender) }}
                                             </div>
+                                            {#<div class="select is-fullwidth">#}
+                                                {#<select name="gender" >#}
+                                                    {#<option value="0">man</option>#}
+                                                    {#<option value="1">vrouw</option>#}
+                                                    {#<option value="2">anders</option>#}
+                                                {#</select>#}
+                                            {#</div>#}
                                             <span class="icon is-small is-left">
                                                 <i class="fa fa-venus-mars"></i>
                                             </span>
@@ -68,42 +75,52 @@
                             <legend>Inloggegevens</legend>
                             <div class="field">
                                 <div class="control has-icons-left">
-                                    <input class="input" name="email" type="email" placeholder="e-mail"/>
+                                    {{ form_widget(form.email) }}
+                                    {#<input class="input" name="email" type="email" placeholder="e-mail"/>#}
                                     <span class="icon is-small is-left">
                                         <i class="fa fa-at"></i>
                                     </span>
                                 </div>
+                                <p class="help is-danger">{{ form_errors(form.email) }}</p>
                             </div>
                             <div class="field">
                                 <div class="control has-icons-left">
-                                    <input class="input" name="username" type="text" placeholder="gebruikersnaam"/>
+                                    {{ form_widget(form.username) }}
+                                    {#<input class="input" name="username" type="text" placeholder="gebruikersnaam"/>#}
                                     <span class="icon is-small is-left">
                                         <i class="fa fa-user"></i>
                                     </span>
                                 </div>
+                                <p class="help is-danger">{{ form_errors(form.username) }}</p>
                             </div>
                             <div class="field">
                                 <div class="control has-icons-left">
-                                    <input class="input" name="password" type="password" placeholder="wachtwoord"/>
+                                    {{ form_widget(form.plainPassword.first) }}
+                                    {#<input class="input" name="password" type="password" placeholder="wachtwoord"/>#}
                                     <span class="icon is-small is-left">
                                         <i class="fa fa-unlock-alt"></i>
                                     </span>
                                 </div>
+                                <p class="help is-danger">{{ form_errors(form.plainPassword.first) }}</p>
                             </div>
                             <div class="field">
                                 <div class="control has-icons-left">
-                                    <input class="input" name="password_check" type="password" placeholder="achtwoord (herhaal)"/>
+                                    {{ form_widget(form.plainPassword.second) }}
+                                    {#<input class="input" name="password_repeat" type="password" placeholder="achtwoord (herhaal)"/>#}
                                     <span class="icon is-small is-left">
                                         <i class="fa fa-unlock-alt"></i>
                                     </span>
                                 </div>
+                                <p class="help is-danger">{{ form_errors(form.plainPassword.second) }}</p>
                             </div>
                         </fieldset>
+                        <a class="button is-primary" href="{{ app.request.headers.get('referer') }}" >annuleren</a>
+                        <button class="button is-info is-pulled-right" type="submit" formnovalidate>registreer</button>
                     </div>
                 </div>
 
-
-            </form>
+            {{ form_end(form) }}
+            {#</form>#}
         </div>
     </section>
 

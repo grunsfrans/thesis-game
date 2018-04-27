@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}FvG.nl{% endblock %}</title>
+
         {% block stylesheets %}
             <link rel="stylesheet" href={{ asset("css/font-awesome.min.css") }}>
             <link href="//fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700" rel="stylesheet" type="text/css">
@@ -11,6 +12,7 @@
             <link rel="stylesheet" href={{ asset("css/bulma.css") }}>
             <link rel="stylesheet" href={{ asset("css/custom.css") }}>
         {% endblock %}
+        {% block extracss %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
@@ -23,9 +25,11 @@
         {% block javascripts %}
             <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <script src={{ asset("js/game.js") }}></script>
             <script>
                 $( function() {
-                    $( "#datepicker" ).datepicker();
+                    $( ".datepicker" ).datepicker();
+                    $( "#answer-buttons" ).hide();
                 } );
             </script>
         {% endblock %}

@@ -9,16 +9,38 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class UserProfile
 {
     private $id;
 
+    /**
+     * @Assert\NotBlank()
+     */
     private $firstName;
 
+    /**
+     * @Assert\NotBlank()
+     */
     private $lastName;
 
-    private $age;
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Date()
+     */
+    private $dob;
+
+    /**
+     * @Assert\NotBlank()
+     */
+    private $gender;
+
+
+    public function __construct()
+    {
+
+    }
 
     /**
      * @return mixed
@@ -60,21 +82,43 @@ class UserProfile
         $this->lastName = $lastName;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getAge()
-    {
-        return $this->age;
+    public function getFullName(){
+        return $this->firstName ." ". $this->lastName;
     }
 
     /**
-     * @param mixed $age
+     * @return mixed
      */
-    public function setAge($age)
+    public function getDob()
     {
-        $this->age = $age;
+        return $this->dob;
     }
+
+    /**
+     * @param mixed $dob
+     */
+    public function setDob($dob)
+    {
+        $this->dob = $dob;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * @param mixed $gender
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+    }
+
+
 
 
   }

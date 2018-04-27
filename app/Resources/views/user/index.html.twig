@@ -1,0 +1,29 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+    <section class="hero is-info is-small ">
+        <div class="hero-head">
+            <div class="navbar">
+                <div id="navbarMenuHeroA" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a class="navbar-item" href="{{ path('logout') }}">
+                            Log uit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="title">
+                Alle gebruikers
+            </div>
+            <div class="subtitle">
+            </div>
+        </div>
+    </section>
+    <section class="section">
+    </section>
+
+
+{% endblock %}

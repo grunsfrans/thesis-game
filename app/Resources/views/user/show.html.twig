@@ -2,10 +2,18 @@
 
 {% block body %}
 
-    <section class="hero is-info ">
+    <section class="hero is-info is-small ">
         <div class="hero-head">
             <div class="navbar">
                 <div id="navbarMenuHeroA" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="{{ path('game_landing') }}">
+                            <span class="icon">
+                                <i class="fa fa-chevron-left"></i>
+                            </span>
+                            spelmenu
+                        </a>
+                    </div>
                     <div class="navbar-end">
                         <a class="navbar-item" href="{{ path('logout') }}">
                             Log uit
@@ -19,10 +27,111 @@
                 Gebuikerspagina
             </div>
             <div class="subtitle">
-                Welkom {{ app.user.userprofile.firstname }}
+                {% if 24 - (24 - "now"|date("H") ) < 6 %}
+                    Goedenacht
+                {% elseif 24 - (24 - "now"|date("H") ) < 12  %}
+                    Goedemorgen
+                {% elseif 24 - (24 - "now"|date("H") ) < 18  %}
+                    Goedemiddag
+                {% else %}
+                    Goedenavond
+                {% endif %}
+                {{ user.userprofile.firstname }}
             </div>
         </div>
+    </section>
+    <section class="section is-info-main-section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="card-header-title">gebruiker gegevens</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">{{ user.userprofile.fullname }}</p>
+                                    <p class="subtitle is-6">
+                                        @{{ user.username }}
+                                    </p>
+                                    <div class="content">
+                                        <p>
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fa-birthday-cake"></i>
+                                            </span>
+                                            {{ user.userprofile.dob|date("d-m-Y") }}
+                                            <span class="is-right">
+                                                {% if user.userprofile.gender == 0 %}
+                                                    <i class="fa fa-mars"></i>
+                                                    {% elseif user.userprofile.gender == 1%}
+                                                    <i class="fa fa-venus"></i>
+                                                    {% else %}
+                                                    <i class="fa fa-venus-mars"></i>
+                                                {% endif %}
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <a href="{{ path('user_update', {'id': user.id}) }}" class="card-footer-item button is-radiusless is-shadowless is-primary">
+                                Bewerk
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="card-header-title">spel statistieken</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="level">
+                                <div class="level-item has-text-centered">
+                                    <div>
+                                        <p class="heading">Huidig Level</p>
+                                        <p class="title">{{ user.student.currentLevel }}</p>
+                                    </div>
+                                </div>
+                                <div class="level-item has-text-centered">
+                                    <div>
+                                        <p class="heading">Hoogst behaalde level</p>
+                                        <p class="title">{{ user.student.highestLevel }}</p>
+                                    </div>
+                                </div>
+                                <div class="level-item has-text-centered">
+                                    <div>
+                                        <p class="heading">Hoogste score</p>
+                                        <p class="title">456K</p>
+                                    </div>
+                                </div>
+                                <div class="level-item has-text-centered">
+                                    <div>
+                                        <p class="heading">aantal spellen</p>
+                                        <p class="title">{{ user.student.games | length}}</p>
+                                    </div>
+                                </div>
+                            </div>
 
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% for type, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class=" is-full notification is-{{ type }}">{{ message }}</div>
+                {% endfor %}
+
+            {% endfor %}
+        </div>
     </section>
 
 

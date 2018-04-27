@@ -1,0 +1,113 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+    <section class="hero is-info is-small">
+        <div class="hero-head">
+            <div class="navbar">
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="title">
+                Gegevens aanpassen
+            </div>
+            <div class="subtitle">
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {{ form_start(form) }}
+                <div class="columns">
+                    <div class="column is-half">
+                        <fieldset>
+                            <legend>Wie ben je?</legend>
+                            <div class="field">
+                                <div class="control">
+                                    {{ form_widget(form.user_profile.first_name) }}
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    {{ form_widget(form.user_profile.last_name) }}
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field has-addons">
+                                        <div class="control has-icons-left is-expanded">
+                                            {{ form_widget(form.user_profile.dob) }}
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fa-birthday-cake"></i>
+                                            </span>
+                                        </div>
+                                        <p class="control">
+                                            <a class="button is-static">
+                                                <i class="fa fa-calendar"></i>
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control has-icons-left is-expanded">
+                                            <div class="select is-fullwidth">
+                                                {{ form_widget(form.user_profile.gender) }}
+                                            </div>
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fa-venus-mars"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>inloggegevens</legend>
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    {{ form_widget(form.email) }}
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-at"></i>
+                                    </span>
+                                </div>
+                                <span class="help is-danger">
+                                    {{ form_errors(form.email) }}
+                                </span>
+                            </div>
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    {{ form_widget(form.username) }}
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                </div>
+                                <span class="help is-danger">{{ form_errors(form.username) }}</span>
+                            </div>
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    {{ form_widget(form.plainPassword.first) }}
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-unlock-alt"></i>
+                                    </span>
+                                </div>
+                                <span class="help is-danger">{{ form_errors(form.plainPassword.first) }}</span>
+                            </div>
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    {{ form_widget(form.plainPassword.second) }}
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-unlock-alt"></i>
+                                    </span>
+                                </div>
+                                <span class="help is-danger">{{ form_errors(form.plainPassword.second) }}</span>
+                            </div>
+                        </fieldset>
+                        <a class="button is-primary" href="{{ app.request.headers.get('referer') }}" >annuleren</a>
+                        <button class="button is-info is-pulled-right" type="submit" formnovalidate>opslaan</button>
+                    </div>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </section>
+
+
+{% endblock %}

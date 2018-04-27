@@ -9,6 +9,10 @@ parameters:
     locale: en
 
 services:
+     twig.extension.intl:
+            class: Twig_Extensions_Extension_Intl
+            tags:
+                - { name: twig.extension }
 
 
 framework:
@@ -40,6 +44,9 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    date:
+        format: d-m-Y, H:i:s
+        timezone: Europe/Paris
 
 # Doctrine Configuration
 doctrine:

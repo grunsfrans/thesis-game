@@ -1,0 +1,34 @@
+AppBundle\Entity\Game:
+    type: entity
+    table: 'game'
+    id:
+        id:
+            type: bigint
+            generator: { strategy: AUTO }
+
+    fields:
+        active:
+            type: boolean
+            options:
+                default: '0'
+        score:
+            type: integer
+            options:
+                default: '0'
+        level:
+            type: integer
+            options:
+                default: '0'
+        timePlayed:
+            type: integer
+            options:
+                default: '0'
+
+
+    manyToOne:
+        student:
+            targetEntity: Student
+            inversedBy: games
+            joinColumn:
+                name: student_id
+                referencedColumnName: id

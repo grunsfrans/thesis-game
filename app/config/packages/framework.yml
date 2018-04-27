@@ -1,0 +1,4 @@
+framework:
+    session:
+        # The native PHP session handler will be used
+        handler_id: ~
