@@ -30,8 +30,9 @@ game_next_question:
 game_check_answer:
     path: /game/checkanswer
     defaults: { _controller: AppBundle:Game:checkAnswer }
-
-
+game_help:
+    path: /game/help
+    defaults: { _controller: AppBundle:Game:help}
 user_index:
     path: /game/users
     defaults: { _controller: AppBundle:User:index }

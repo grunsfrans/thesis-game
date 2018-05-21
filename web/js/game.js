@@ -1,105 +1,231 @@
-var nxtbtn = '<button class="button btn-round big is-success " type="button" onclick="nextQuestion()">' +
+var nxtbtn = '<button id="next" class="button btn-round big is-success " type="button" onclick="nextQuestion()">' +
     '<i class="fa fa-forward"></i>' +
     '<span class="btn-round-text">Volgende</span>' +
     '</button>';
-var time_started
 
+var gametimer
+var time_started;
+var time_left;
+var timeouts = [];
+var skipped = 0;
+var helped = 0;
 
 function nextQuestion() {
     $.get( "nextquestion", function( data ) {
-        console.log(data);
-        var elements = elementsForAnswerType(data['answer_type'])
-        $( "#word" ).html( data['word']);
-        showTutorMessage(data['message']);
-        $( "#game-interactions" ).html(elements)
+        cancelAllTimeouts();
+        var elements = elementsForAnswerType(data['answer_type'], data['options'])
+        $( "#word" ).html( data['word'] != '' ? data['word'] : elements[1]);
+        showTutorMessage(data['tutor_output']);
+        $( "#game-interactions" ).html(elements[0])
+        $('#helpbtns button').prop('disabled', false);
         bindKeys();
         $('#word').removeClass();
-        time_started = $.now()
+        $('#guessf').focus();
+        startCounting();
     });
 }
 
-function check(answer) {
-    reactiontime = Math.ceil(($.now() - time_started)/1000) // time in seconds
-    word = $( "#word" ).html();
-    $.post( "checkanswer",JSON.stringify({word: word, answer: answer, reactiontime: reactiontime }), function( data ) {
-        console.log(data);
-       showAnswerResult(answer, data)
-        adjust('level', data['reward']['level']);
-        adjust('score', data['reward']['score']);
-        $( "#game-interactions" ).html(nxtbtn);
-    });
-}
+
 
 function showAnswerResult(answer, result) {
-    showTutorMessage(result['message'], result['extra'])
+    if(result['tutor_output'][0] != "controlgroup"){
+        showTutorMessage(result['tutor_output'])
+    }
     word = $( "#word" );
     word.html( result['answer'] );
-    switch (result['correct']){
-        case 1:
-            word.addClass("correct");
-            break;
-        case 2:
-            word.addClass("altcorrect");
-            break;
-        default:
-            word.addClass("incorrect");
-            break;
+    if (skipped){
+        word.html( result['answer'] ).addClass( 'altcorrect');
+    } else {
+        switch (result['correct']){
+            case 1:
+                result['target'] == result['answer']  ? showCorrect() : showIncorrect();
+                break;
+            case 2:
+                showAltCorrect();
+                break;
+            default:
+                result['target'] == result['answer'] ? showCorrect() : showIncorrect();
+                break;
+        }
     }
 }
 
-function showTutorMessage(msg, extra) {
-    tr = $('#tutor-response span');
-    tre = $('#tutor-response-extra');
-    tr.html(msg['text']).parent().removeClass().addClass(msg['type'] + ' ' + msg['mood']);
-    tre.removeClass();
-    if (typeof extra != 'undefined'){
-        console.log('bgghj')
-        tre.addClass('active ' + extra['type'] + ' ' + extra['mood']).html(extra['text']);
+function showCorrect() {
+    $('[data-control]').html('<span><i style="color: #23d160" class="fa fa-check"></i></span>')
+    $('#word').addClass('correct');
+}
+
+function showIncorrect() {
+    $('[data-control]').html('<span><i style="color: #ff3860" class="fa fa-times"></i></span>')
+    $('#word').addClass('incorrect');
+}
+
+function showAltCorrect() {
+    $('[data-control]').html('<span><i style="color: #209cef" class="fa fa-check-square-o"></i></span>')
+    $('#word').addClass('altcorrect');
+}
+
+function showTutorMessage(tutor_output) {
+    if(typeof tutor_output == "string"){
+        to = JSON.parse(tutor_output);
+    } else {
+        to = tutor_output;
     }
+    msg = to[0];
+    extra = to[1];
+    showSepparateSentences(msg, extra);
 }
 
-function checkGuessFull() {
-    $answer = $('#guessf').val();
-    console.log($answer);
-    check($answer);
+function showSepparateSentences(msg, extra) {
+    tr = $('#game-response span');
+    tre = $('#game-response-extra span');
+    tr.parent().removeClass().addClass(msg.type + ' ' + msg.mood);
+    tre.html('').parent().removeClass();
+    sentences = msg.text.match(/[^\.!\?]+[\.!\?]+/g);
+    $.each(sentences, function (index, s) {
+        timeout = setTimeout(function () { tr.html(s); },3000*index);
+        timeouts.push(timeout);
+    });
+    timeout = setTimeout(function () {
+        if (typeof extra != 'undefined' && extra != null ){
+            tre.html(extra.text).parent().removeClass().addClass('active ' + extra.type + ' ' + extra.mood);
+        }
+    },3000*(sentences.length-1) + 500);
+    timeouts.push(timeout);
 }
 
-function elementsForAnswerType(answer_type) {
+function showHint(text, mood) {
+    hintcont = $('#game-response-extra span');
+    hintcont.html(text).parent().removeClass().addClass('active '  + mood);
+    timeouts.push(setTimeout(function () { hintcont.html('').parent().removeClass(); },3000));
+}
+
+
+function elementsForAnswerType(answer_type, data) {
     var interactions = "";
+    var options = [];
     switch (answer_type){
-        case "CORRECT_INCORRECT":
+        case "CORR_INCORR":
             interactions =  '<button class="button is-success" type="button" onclick="check(\'correct\')">goed</button> ' +
                             '<button class="button is-danger" type="button" onclick="check(\'incorrect\')">fout</button>';
             break;
 
-        case "GUESS_FULL":
+        case "GUESS_SHUFF":
+        case "GUESS_DOTS":
             interactions =  '<div class="field has-addons">' +
                             '<div class="control is-expanded"><input id="guessf" class="input is-primary" type="text" placeholder=""></div>' +
-                            '<div class="control"><a id="send-btn" class="button is-success" type="button" onclick="checkGuessFull()"><i class="fa fa-paper-plane"></i></a></div>' +
-                            '</div>';
+                            '<div class="control"><a id="send-btn" class="button is-success" type="button" onclick="checkGuessFull()"><i class="fa fa-paper-plane"></i></a></div></div>'
+            break;
+        case "PICK_CORR":
+            interactions =  '<button id="next" class="button btn-round big is-success " type="button" onclick="checkPick()">' +
+                            '<i class="fa fa-check"></i>' +
+                            '<span class="btn-round-text">Controleer</span>' +
+                            '</button>';;
+            $(data).each(function (i, word) {
+                options += '<div class="pick-one"><label><input type="radio" name="pick-one" value="'+word+'"><span>'+word+'</span></label></div>'
+            })
+            break;
         default:
             break;
     }
-    return interactions;
+    return [interactions, options];
 }
+
+
+function check(answer) {
+    cancelAllTimeouts();
+    stopCounting();
+    reactiontime = Math.floor(($.now() - time_started)/1000); // time in seconds
+    $('#game-interactions ,#helpbtns button').prop('disabled', true);
+    word = $( "#word" ).html();
+    $.post( "checkanswer",JSON.stringify({word: word, answer: answer.toLowerCase(), reactiontime: reactiontime, skipped: skipped, helped: helped }),
+        function( data ) {
+            showAnswerResult(answer, data)
+            adjust('level', data['reward']['level']);
+            adjust('score', data['reward']['score']);
+            showTimeBonus(data['reward']['time_bonus']);
+            changeTutor(data['reward']['level'])
+            if (data['game_over'] == 1){
+                gameOver();
+            }else{
+                $( "#game-interactions" ).html(nxtbtn);
+                bindKeys();
+                resetHelpAndSkipped();
+            }
+        }
+    );
+}
+
+function checkPick() {
+    var answer = $('input[name=pick-one]:checked').val();
+    if (answer !='' && typeof(answer) != "undefined"){
+        check(answer)
+    } else {
+        showHint("Selecteer een antwoord alsjeblieft");
+    }
+
+}
+
+function checkGuessFull() {
+    $answer = $('#guessf').val();
+    if ($answer != '' && $answer.length >=1){
+        check($answer);
+    } else {
+        showHint("Vul een antwoord in alsjeblieft");
+    }
+}
+
+
+
+function changeTutor(level){
+    if (level != 0 && level != null){
+        var tutor = $('.tutor');
+        var current_level = tutor.attr('data-lvl');
+        var new_level = Number(current_level) + level;
+        var new_tutor_img = "/img/tutors/"+ new_level + ".png";
+        tutor.fadeOut(1000, function () {
+            tutor.attr("src", new_tutor_img);
+            tutor.attr("data-lvl", new_level);
+            tutor.fadeIn(1000);
+        });
+        if (level>0){
+            cancelAllTimeouts();
+            msg = "Yes! Dit voelt veel beter!"
+            $('[data-tutor] span').html(msg).addClass('pos');
+            showHint("Dankjewel!", 'pos');
+        }else if (level<0) {
+            cancelAllTimeouts();
+            msg = "Onee! "
+            $('[data-tutor] span').html(msg).addClass('neg');
+            showHint("Dit doet pijn hoor!", 'neg');
+        }
+    }
+}
+
+
 
 function bindKeys() {
     unbindKeys();
-    $('#game-interactions').keypress(function (e) {
+    $('body').keypress(function (e) {
         var key = e.which;
         if(key == 13) {  // the enter key code
-            $('#send-btn').click();
+            $('#send-btn, #next').click();
             return false;
         }
     });
+    $(' label ').click(function(){
+        $(this).children(' span ').addClass('input-checked');
+        $(this).parent('.pick-one').siblings('.pick-one').children(' label ').children(' span ').removeClass('input-checked');
+    });
+
 }
 
 function unbindKeys() {
-    $('#game-interactions').off();
+    $('body').off();
 }
 
 function adjust(property, amount){
-    if (amount != 0) {
+    if (amount != null && amount != 0) {
         var prop_elem = $('#' + property);
         var msg_elem = $('#' + property + '-msg');
         var change = (amount > 0) ? '+' + amount : amount;
@@ -115,3 +241,138 @@ function showChange(change, elem) {
         $(this).removeClass("show " + change_class).dequeue();
     });
 }
+
+function showTimeBonus(time_bonus) {
+    if (time_bonus){
+        elem = $('#score-msg');
+        content = elem.html();
+        updated = content + ' <i class="fa fa-rocket"></i>'
+        elem.html(updated);
+    }
+
+}
+
+function cancelAllTimeouts() {
+    $.each(timeouts, function (i, timeout) {
+        clearTimeout(timeout);
+    })
+    timeouts = [];
+}
+
+function startCounting() {
+    time_started = time_started = $.now();
+    gametimer =  setInterval(function () {
+      countDown();  
+    },1000);
+}
+
+function countDown() {
+    if (typeof (time_left) == "undefined" ){
+        timestr = $('#time').html().trim();
+        minutessecs = timestr.split(':');
+        time_left = Number(minutessecs[0])*60 + Number(minutessecs[1])
+    }
+    time_left--;
+    mins = Math.floor(time_left / 60);
+    secs = time_left - mins *60;
+    extrazero = secs < 10 ? '0' : '';
+    $('#time').html(mins+':'+extrazero+secs);
+    if (mins < 1 && secs < 1){
+        gameOver();
+    }
+}
+
+function stopCounting() {
+    clearInterval(gametimer);
+}
+
+function help() {
+    helped = 1;
+    $.post("help", function (data) {
+        parsed =  JSON.parse(data);
+        word = parsed['text'][0];
+        if (parsed['exp']){
+            showHint("Dit woord betekend in het Nederlans: <b>"+word+"</b>", 0);
+        } else {
+            showSepparateSentences({'text': "Vertaling: <b>"+word+"</b>.", 'mood': 0, 'type': 'HELP'},null);
+        }
+
+    });
+}
+
+function skipQuestion() {
+    skipped = 1;
+    check('');
+}
+
+
+function resetHelpAndSkipped(){
+    helped = skipped = 0;
+}
+
+function gameOver() {
+    playtime = Math.floor(($.now() - time_started)/1000);
+    $.post("end", JSON.stringify({playtime: playtime}),function (data){
+        stopCounting();
+        message = {'text':"Tijd om!", 'mood' : 0 , 'type' :''};
+        hint = {'text':"Zullen we het nog een keer proberen?", 'mood':0 , 'type' : ''};
+        showTutorMessage([message, hint]);
+        btns = '<p>Game Over</p>' +
+            '<a class="button is-warning" href="/game"><span><i class="fa fa-arrow-left"></i>Menu</span></a>' +
+            '<a class="button is-success" href="/game/new"><span><i class="fa fa-robot"></i>Nieuw spel</span></a>'
+        $("#word").html(btns);
+        $("#game-interactions").html('');
+    })
+}
+
+
+/// frontpage
+
+$(".btn-round.main").on('click', function () {
+    toggle = $(this).hasClass('active');
+    info = $('#info')
+    btns = $('.btn-round.main');
+    $.each(btns, function (i, btn) {
+        $(btn).removeClass('active');
+    })
+    if (toggle){
+        info.removeClass('active');
+    }else{
+        info.addClass('active');
+        $(this).addClass('active');
+    }
+
+})
+
+$(function () {
+    $.each($(".btn-round.main"), function (index, btn) {
+        setTimeout(function () { $(btn).addClass('active'); },1500*(index+1));
+        setTimeout(function () { $(btn).removeClass('active'); },1500*(index+1)+1500);
+    });
+});
+
+
+
+function showMe() {
+    html = "<h1>Over mij</h1>" +
+        "<a class='button is-info btn-round'><i class='fab fa-facebook-f'></i></a> ";
+    $('#info').html(html);
+}
+
+function showThesis() {
+    html = "<h1>Thesis Onderzoek</h1>" +
+        "Momenteel ben ik bezig om mijn studie Artificial Intelligence (AI) aan de Radboud Universiteit Nijmegen af te ronden.<br>" +
+        "Voor mijn Bachelorthesis heb ik een online 'educational game' (educatief spel) ontwikkeld waarmee ik het onderzoek" +
+        " wil doen naar leerprestaties onder bepaalde invloeden.<br>" +
+        "In het spel is het de bedoeling om binnen 5 minuten zoveel mogelijk Engelse woorden correct te beoordelen of spellen." +
+        "<br><a class='button is-warning ' style='margin-top: 15px' href='/game' target='_blank'><i class='fa fa-graduation-cap'></i>Doe mee</a> ";
+    $('#info').html(html);
+
+}
+
+function showCV() {
+    html = "<h1>Curriculum Vitae</h1>" +
+        "<a class='button btn-round is-info' type='button' href='https://www.linkedin.com/in/fvg1988' target='_blank'> <i class='fab fa-linkedin-in'></i></a> ";
+    $('#info').html(html);
+}
+

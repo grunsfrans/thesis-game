@@ -1,0 +1,15 @@
+AppBundle\Entity\Message:
+    type: entity
+    table: 'message'
+    id:
+        id:
+            type: bigint
+            generator: { strategy: AUTO }
+
+    fields:
+        type:
+            type: string
+        mood:
+            type: integer
+        text:
+            type: string

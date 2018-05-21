@@ -22,15 +22,17 @@ class Student
 
     private $timePlayed;
 
-    private $games;
-
     private $errors;
+
+    private $user;
+
+    private $games;
 
     private $attemptedWords;
 
     public function __construct(){
-        $this->currentLevel = 0;
-        $this->highestLevel = 0;
+        $this->currentLevel = 1;
+        $this->highestLevel = 1;
         $this->timePlayed = 0;
         $this->wordsAttempted = 0;
         $this->errors = 0;
@@ -138,6 +140,12 @@ class Student
         $this->games = $games;
     }
 
+    public function getActiveGame(){
+       $activeGames = $this->games->filter(function($game) {
+            return $game->isActive();
+        });
+       return $activeGames->first();
+    }
 
     /**
      * @return mixed
@@ -173,6 +181,22 @@ class Student
     public function setAttemptedWords($attemptedWords)
     {
         $this->attemptedWords = $attemptedWords;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
     }
 
 

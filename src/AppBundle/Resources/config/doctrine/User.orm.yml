@@ -31,6 +31,7 @@ AppBundle\Entity\User:
                 referencedColumnName: id
         student:
             targetEntity: Student
+            inversedBy: user
             cascade: ["persist"]
             joinColumn:
                 name: student_id

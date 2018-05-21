@@ -1,15 +1,12 @@
-{% extends "::base.html.twig" %}
+{#{% extends "::base.html.twig" %}#}
 
 {% block body %}
-    <div class="columns">
-        <div class="column">
             {% if error %}
                 <div class="notification is-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
-            <h3 class="title">
+            <h3 class="title" style="margin-top: 0">
                 Inloggen
             </h3>
-            <hr>
             <form action="{{ path('login') }}" method="post">
                 <div class="field">
                     <label class="label" for="username">Gebruiker:</label>
@@ -29,8 +26,7 @@
                 </div>
 
             </form>
-        </div>
-    </div>
+
 
 
 

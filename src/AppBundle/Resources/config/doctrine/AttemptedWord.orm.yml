@@ -6,12 +6,6 @@ AppBundle\Entity\AttemptedWord:
             type: bigint
             generator: { strategy: AUTO }
 
-    oneToOne:
-        word:
-            targetEntity: Word
-            joinColumn:
-                name: word
-                referencedColumnName: id
 
     manyToOne:
         student:
@@ -19,6 +13,11 @@ AppBundle\Entity\AttemptedWord:
             inversedBy: attemptedWords
             joinColumn:
                 name: student
+                referencedColumnName: id
+        word:
+            targetEntity: Word
+            joinColumn:
+                name: word
                 referencedColumnName: id
 
     fields:

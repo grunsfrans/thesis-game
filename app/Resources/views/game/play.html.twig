@@ -6,16 +6,18 @@
 
 {% block body %}
 
-   <section class="section">
+   <section class="section game-main">
        <div class="container ">
            <div class="columns">
                <div id="game-main" class="column is-offset-3 is-6 has-text-centered">
-                   <img src='{{ asset("img/tutors/#{random(100)}.png") }}' class="tutor"/>
-                   <div id="tutor-response"><span></span></div>
-                   <div id="tutor-response-extra">info</div>
+                   <img src='{{ asset("img/tutors/#{ level }.png") }}' class="tutor" data-lvl="{{ level }}"/>
+                   {% if app.user.student.experimental %}
+                       <div id="game-response" data-tutor><span></span></div>
+                       <div id="game-response-extra" data-tutor-extra><span></span></div>
+                   {% endif %}
                    <div id="game-scores">
                        <div class="columns">
-                           <div class="column is-6">
+                           <div class="column is-5">
                                <span class="level-title">
                                    Level
                                </span>
@@ -26,7 +28,12 @@
                                    +1
                                </span>
                            </div>
-                           <div class="column is-6">
+                           <div class="column is-2">
+                               <span id="time">
+                                   {{ time }}
+                               </span>
+                           </div>
+                           <div class="column is-5">
                                <span class="level-title">
                                    Score
                                </span>
@@ -39,15 +46,13 @@
                            </div>
                        </div>
                    </div>
-                   {% if app.user.student.experimental == 1 %}
-                   {% endif %}
                    {% if app.user %}
                        {% if app.user.student.experimental == 0 %}
-                           <div id="tutor-response">Welkom terug {{ app.user.userprofile.firstname }}</div>
+                           <div id="game-response" data-control><span>Welkom terug {{ app.user.userprofile.firstname }}</span></div>
                        {% endif %}
                            <div id="word-container" >
                                <div id="word">
-                                   Here comes the word
+                                   ...
                                </div>
                            </div>
 
@@ -82,18 +87,27 @@
                         </span>
                     </button>
                 </div>
-                <div class="column is-4 has-text-centered">
-                    <a class="button btn-round is-info" href="{{ path('user_show',{'id': app.user.id }) }}">
-                        <i class="fa fa-user"></i>
-                        <span class="btn-round-text">
-                            Jouw gegevens
-                        </span>
-                    </a>
-
+                <div id="helpbtns" class="column is-4 has-text-centered">
+                    <button id="help" class="button btn-round is-info " type="button" onclick="help()" disabled>
+                        <i class="fa fa-question"></i>
+                        <span class="btn-round-text">Help me</span>
+                    </button>
+                    <button id="help" class="button btn-round is-dark " type="button" onclick="skipQuestion()" disabled>
+                        <i class="fa fa-step-forward"></i>
+                        <span class="btn-round-text">Sla over</span>
+                    </button>
                 </div>
             </div>
 
         </footer>
     {% endif %}
+
+
+{% endblock %}
+
+{% block extrascripts %}
+    <script>
+        showTutorMessage({{ tutor_output|json_encode|raw }});
+    </script>
 {% endblock %}
 

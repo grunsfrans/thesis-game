@@ -2,166 +2,235 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99c6ed73-ea2f-4faf-9a10-df8f4aa05db9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/game/play.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/user/update.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/packages/framework.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/WordController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/AttemptedWord.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Game.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Student.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Word.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/UserProfileType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/UserRegistrationType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/UserUpdateType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/AttemptedWord.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Game.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Student.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Word.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Service/Tutor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Service/WordService.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/game.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/game.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-accordion/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-accordion/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-accordion/accordion.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-accordion/accordion.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-accordion/accordion.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-accordion/bulma-accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-accordion/bulma-accordion.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-accordion/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-badge/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-badge/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-badge/badge.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-badge/bulma-badge.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-badge/bulma-badge.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-badge/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-calendar/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-calendar/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-calendar/bulma-calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-calendar/bulma-calendar.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-calendar/calendar.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-calendar/datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-calendar/datepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-calendar/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-carousel/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-carousel/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-carousel/bulma-carousel.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-carousel/bulma-carousel.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-carousel/carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-carousel/carousel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-carousel/carousel.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-carousel/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-checkradio/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-checkradio/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-checkradio/bulma-checkradio.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-checkradio/bulma-checkradio.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-checkradio/checkradio.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-checkradio/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-divider/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-divider/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-divider/bulma-divider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-divider/bulma-divider.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-divider/divider.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-divider/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-iconpicker/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-iconpicker/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-iconpicker/iconPicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-iconpicker/iconPicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-iconpicker/iconPicker.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-iconpicker/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pageloader/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pageloader/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pageloader/bulma-pageloader.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pageloader/bulma-pageloader.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pageloader/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pageloader/pageloader.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pricingtable/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pricingtable/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pricingtable/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pricingtable/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-pricingtable/pricing-table.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-quickview/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-quickview/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-quickview/bulma-quickview.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-quickview/bulma-quickview.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-quickview/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-quickview/quickview.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-quickview/quickview.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-quickview/quickview.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-ribbon/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-ribbon/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-ribbon/bulma-ribbon.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-ribbon/bulma-ribbon.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-ribbon/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-ribbon/ribbon.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-slider/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-slider/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-slider/bulma-slider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-slider/bulma-slider.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-slider/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-slider/slider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-slider/slider.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-steps/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-steps/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-steps/bulma-steps.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-steps/bulma-steps.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-steps/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-steps/steps.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-steps/steps.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-steps/steps.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-switch/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-switch/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-switch/bulma-switch.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-switch/bulma-switch.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-switch/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-switch/switch.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tagsinput/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tagsinput/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tagsinput/bulma-tagsinput.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tagsinput/bulma-tagsinput.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tagsinput/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tagsinput/tagsinput.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tagsinput/tagsinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tagsinput/tagsinput.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-timeline/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-timeline/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-timeline/bulma-timeline.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-timeline/bulma-timeline.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-timeline/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-timeline/timeline.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tooltip/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tooltip/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tooltip/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tooltip/bulma-tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tooltip/bulma-tooltip.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tooltip/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/bulma-tooltip/tooltip.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/extensions.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bulma-extensions/package.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/FvG.nl.iml" afterPath="$PROJECT_DIR$/.idea/FvG.nl.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Message.orm.yml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/101.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/102.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/103.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/104.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/51.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/52.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/53.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/54.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/55.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/56.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/57.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/58.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/59.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/60.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/61.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/62.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/63.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/64.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/65.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/66.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/67.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/68.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/69.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/70.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/71.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/72.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/73.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/74.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/75.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/76.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/77.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/78.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/79.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/80.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/81.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/82.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/83.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/84.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/85.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/86.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/87.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/88.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/89.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/90.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/91.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/92.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/93.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/94.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/95.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/96.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/97.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/98.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/99.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/51.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/52.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/53.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/54.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/55.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/56.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/57.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/58.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/59.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/60.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/61.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/62.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/63.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/64.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/65.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/66.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/67.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/68.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/69.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/70.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/71.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/72.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/73.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/74.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/75.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/76.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/77.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/78.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/79.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/80.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/81.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/82.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/83.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/84.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/85.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/86.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/87.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/88.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/89.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/90.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/91.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/92.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/93.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/94.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/95.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/96.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/97.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/98.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/tutors/klein/99.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/tutors/1.png" afterPath="$PROJECT_DIR$/web/img/tutors/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/tutors/2.png" afterPath="$PROJECT_DIR$/web/img/tutors/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/tutors/3.png" afterPath="$PROJECT_DIR$/web/img/tutors/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/tutors/4.png" afterPath="$PROJECT_DIR$/web/img/tutors/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/tutors/5.png" afterPath="$PROJECT_DIR$/web/img/tutors/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/tutors/6.png" afterPath="$PROJECT_DIR$/web/img/tutors/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/tutors/7.png" afterPath="$PROJECT_DIR$/web/img/tutors/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/tutors/8.png" afterPath="$PROJECT_DIR$/web/img/tutors/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/frontpage.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/frontpage.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/game/landing.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/game/landing.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/user/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/user/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/user/register.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/user/register.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/user/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/user/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/game/play.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/game/play.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/security/login.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/security/login.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/es5-ext/test/string/#/capitalize.js" afterPath="$PROJECT_DIR$/node_modules/es5-ext/test/string/#/capitalize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/es5-ext/test/string/#/uncapitalize.js" afterPath="$PROJECT_DIR$/node_modules/es5-ext/test/string/#/uncapitalize.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/UserProfile.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/UserProfile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/AttemptedWord.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/AttemptedWord.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Student.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Student.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Word.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Word.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/AttemptedWord.orm.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/AttemptedWord.orm.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Student.orm.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Student.orm.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/User.orm.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/User.orm.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/UserProfile.orm.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/UserProfile.orm.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/custom.css" afterPath="$PROJECT_DIR$/web/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Word.orm.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Word.orm.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Service/Tutor.php" afterPath="$PROJECT_DIR$/src/AppBundle/Service/Tutor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Service/WordService.php" afterPath="$PROJECT_DIR$/src/AppBundle/Service/WordService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/game.css" afterPath="$PROJECT_DIR$/web/css/game.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/game.js" afterPath="$PROJECT_DIR$/web/js/game.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -178,39 +247,44 @@
       <file leaf-file-name="play.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/game/play.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="13" column="50" lean-forward="false" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+            <state relative-caret-position="271">
+              <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="game.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/css/game.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="323">
+              <caret line="313" column="16" lean-forward="true" selection-start-line="313" selection-start-column="16" selection-end-line="313" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1733">
-              <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserProfile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UserProfile.php">
+      <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="90" column="7" lean-forward="false" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="349" column="82" lean-forward="false" selection-start-line="349" selection-start-column="82" selection-end-line="349" selection-end-column="82" />
+              <folding>
+                <marker date="1526936918636" expanded="true" signature="1636:1650" ph="..." />
+                <marker date="1526936918636" expanded="true" signature="1798:1812" ph="..." />
+                <marker date="1526936918636" expanded="true" signature="1963:1977" ph="..." />
+                <marker date="1526936918636" expanded="true" signature="11865:11881" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,8 +292,40 @@
       <file leaf-file-name="GameController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="62" />
+            <state relative-caret-position="151">
+              <caret line="186" column="55" lean-forward="false" selection-start-line="186" selection-start-column="55" selection-end-line="186" selection-end-column="55" />
+              <folding>
+                <element signature="e#119#154#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Game.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="633">
+              <caret line="134" column="5" lean-forward="false" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landing.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/game/landing.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="71" lean-forward="false" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tutor.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Tutor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="52" column="52" lean-forward="false" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -228,32 +334,20 @@
       <file leaf-file-name="WordService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/WordService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="1" />
+            <state relative-caret-position="809">
+              <caret line="104" column="22" lean-forward="false" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
               <folding>
-                <element signature="e#37#66#0#PHP" expanded="true" />
+                <marker date="1526916487464" expanded="true" signature="505:565" ph="SELECT * FRO... word" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tutor.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Tutor.php">
+      <file leaf-file-name="Student.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Student.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-              <folding>
-                <element signature="e#37#66#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/game.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="44" column="39" lean-forward="false" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+            <state relative-caret-position="1545">
+              <caret line="145" column="11" lean-forward="false" selection-start-line="145" selection-start-column="11" selection-end-line="145" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -264,9 +358,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -275,6 +369,8 @@
       <find>pug</find>
       <find>font</find>
       <find>f</find>
+      <find>disabled</find>
+      <find>tutor-re</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -286,14 +382,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/security/login.html.twig.html" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/security/login.html.twig" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/UserType.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/UserProfile.orm.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/UserRegistrationForm.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/UserProfileForm.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/UserProfile.php" />
@@ -304,39 +392,47 @@
         <option value="$PROJECT_DIR$/app/Resources/views/user/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/user/register.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/user/update.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Word.orm.yml" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/UserProfileType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Studentmodel.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Score.orm.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/User.orm.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Score.php" />
         <option value="$PROJECT_DIR$/src/Service/Wordservice.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/WordController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/Wordservice.php" />
-        <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Game.orm.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/game/landing.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/frontpage.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Word.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Game.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/user/show.html.twig" />
         <option value="$PROJECT_DIR$/web/css/custom.css" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Student.php" />
+        <option value="$PROJECT_DIR$/app/config/packages/framework.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Helper/Tutor.php" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Student.orm.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/AttemptedWord.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/User.orm.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/GameInterface.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Sentence.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Sentence.orm.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Message.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/AttemptedWord.orm.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Word.orm.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Word.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/AttemptedWord.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/game/loessie.html.twig.html" />
+        <option value="$PROJECT_DIR$/web/js/loessie.js" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/frontpage.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Student.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/game/landing.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Service/WordService.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Service/Tutor.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/game/play.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" />
         <option value="$PROJECT_DIR$/web/css/game.css" />
         <option value="$PROJECT_DIR$/web/js/game.js" />
-        <option value="$PROJECT_DIR$/app/config/packages/framework.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Service/WordService.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Service/Tutor.php" />
       </list>
     </option>
   </component>
@@ -471,7 +567,23 @@
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="game" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="security" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
@@ -483,6 +595,13 @@
               <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
@@ -496,14 +615,55 @@
               <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="doctrine" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Service" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="FvG.nl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FvG.nl" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -525,13 +685,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/AppBundle/Service" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Entity" />
-      <recent name="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine" />
-      <recent name="$PROJECT_DIR$/app/Resources/views/game" />
+      <recent name="$PROJECT_DIR$/web/js" />
       <recent name="$PROJECT_DIR$/src/AppBundle/Controller" />
+      <recent name="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine" />
+      <recent name="$PROJECT_DIR$/src/AppBundle/Entity" />
+      <recent name="$PROJECT_DIR$/src/AppBundle/Service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/AppBundle/Service" />
+      <recent name="$PROJECT_DIR$/src/AppBundle/Helper" />
       <recent name="$PROJECT_DIR$/src/AppBundle" />
     </key>
   </component>
@@ -585,12 +747,13 @@
       <workItem from="1523256791806" duration="195000" />
       <workItem from="1523323607645" duration="420000" />
       <workItem from="1524147215596" duration="29520000" />
-      <workItem from="1524470068334" duration="30787000" />
+      <workItem from="1524470068334" duration="109583000" />
+      <workItem from="1526111145470" duration="61456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284665000" />
+    <option name="totallyTimeSpent" value="424917000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -600,7 +763,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -610,9 +772,11 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="100" width="1240" height="700" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -624,74 +788,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/UserProfileType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4482">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/robots.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -710,20 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
           <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -755,53 +842,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="74" lean-forward="false" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/WordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/landing.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Word.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,34 +857,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/frontpage.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="134" column="5" lean-forward="false" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/user/update.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,15 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="117" column="87" lean-forward="false" selection-start-line="117" selection-start-column="87" selection-end-line="117" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,90 +879,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Word.orm.yml">
+    <entry file="file://$PROJECT_DIR$/app/config/packages/framework.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="45">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Game.orm.yml">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="40" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="33" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UserProfile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="90" column="7" lean-forward="false" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/User.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="40" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="30" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/AttemptedWord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Student.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/AttemptedWord.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1733">
-          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/play.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="13" column="50" lean-forward="false" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/game.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="44" column="39" lean-forward="false" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+        <state relative-caret-position="267">
+          <caret line="371" column="23" lean-forward="false" selection-start-line="371" selection-start-column="23" selection-end-line="371" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -966,53 +904,283 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="65" column="57" lean-forward="false" selection-start-line="65" selection-start-column="57" selection-end-line="65" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/packages/framework.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/WordService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="1" />
+        <state relative-caret-position="210">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#37#66#0#PHP" expanded="true" />
+            <element signature="e#119#148#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="40" lean-forward="false" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/User.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameInitializer.php" />
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/UserProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="90" column="7" lean-forward="false" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Message.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="62" />
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1505148009000" expanded="true" signature="0:62" ph="&lt;IfModule mod_authz_core.c&gt;" />
+            <marker date="1505148009000" expanded="true" signature="63:142" ph="&lt;IfModule !mod_authz_core.c&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Student.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/AttemptedWord.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engfreq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/WordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Word.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Word.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/loessie.html.twig.html" />
+    <entry file="file://$PROJECT_DIR$/web/js/loessie.js" />
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/AttemptedWord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="51" column="44" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/frontpage.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Game.orm.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="134" column="5" lean-forward="false" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/landing.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="71" lean-forward="false" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Student.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="1545">
+          <caret line="145" column="11" lean-forward="false" selection-start-line="145" selection-start-column="11" selection-end-line="145" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/WordService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="104" column="22" lean-forward="false" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+          <folding>
+            <marker date="1526916487464" expanded="true" signature="505:565" ph="SELECT * FRO... word" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Tutor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="376">
+          <caret line="52" column="52" lean-forward="false" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/game/play.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="186" column="55" lean-forward="false" selection-start-line="186" selection-start-column="55" selection-end-line="186" selection-end-column="55" />
           <folding>
-            <element signature="e#37#66#0#PHP" expanded="true" />
+            <element signature="e#119#154#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="349" column="82" lean-forward="false" selection-start-line="349" selection-start-column="82" selection-end-line="349" selection-end-column="82" />
+          <folding>
+            <marker date="1526936918636" expanded="true" signature="1636:1650" ph="..." />
+            <marker date="1526936918636" expanded="true" signature="1798:1812" ph="..." />
+            <marker date="1526936918636" expanded="true" signature="1963:1977" ph="..." />
+            <marker date="1526936918636" expanded="true" signature="11865:11881" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/game.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="313" column="16" lean-forward="true" selection-start-line="313" selection-start-column="16" selection-end-line="313" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

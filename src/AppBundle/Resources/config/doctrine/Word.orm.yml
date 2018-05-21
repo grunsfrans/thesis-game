@@ -14,3 +14,5 @@ AppBundle\Entity\Word:
             type: bigint
         length:
             type: integer
+        difficulty:
+            type: bigint

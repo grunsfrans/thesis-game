@@ -1,48 +1,39 @@
 {% extends "::base.html.twig" %}
+{% block extracss %}
+    <link rel="stylesheet" href={{ asset("css/game.css") }}>
+{% endblock %}
 
 {% block body %}
-    <section class="hero is-medium is-bold photo-hero">
-        <div class="hero-head">
-            <div class="navbar">
-                <div class="navbar-brand ">
+    <section class="section frontpage">
+        <div class="column  has-text-centered container-alpha container-center">
+            <div class="blur"></div>
+            <div class="content">
+                <a class="button btn-round main me" type="button" onclick="showMe()">
+                    <span class="btn-round-text">
+                        Over mij
+                    </span>
+                </a>
+                <a class="button btn-round main " type="button" onclick="showThesis()">
+                    <i class="fa fa-robot"></i>
+                    <span class="btn-round-text">
+                            Thesis onderzoek
+                        </span>
+                </a>
+                <a class="button btn-round main in" type="button" onclick="showCV()">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="btn-round-text">
+                        Curriculum Vitae
+                        </span>
+                </a>
+                <div id="info">
 
                 </div>
             </div>
+
+
         </div>
-        <div class="hero-body has-text-centered">
-            FvG.nl
-        </div>
-        <div class="hero-foot">
-            <div class="container">
-                <nav class="tabs is-boxed">
-                    <ul>
-                        <li>
-                            <a>Over mij</a>
-                        </li>
-                        <li>
-                            <a>Thesis onderzoek</a>
-                        </li>
-                        <li>
-                            <a>Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+
     </section>
-    <section class="section">
-        <div class="container has-text-centered">
-
-        </div>
-    </section>
-
-    <footer class=" footer is-small has-text-centered">
-        <small>
-            Please check my <a href="https://www.linkedin.com/in/fvg1988/"><i class="fa fa-linkedin" aria-hidden="true"></i></a> or <a href="_CV_Frans_van_Grunsven_2017.pdf">CV</a>
-        </small>
-    </footer>
-
-
 
 {% endblock %}
 

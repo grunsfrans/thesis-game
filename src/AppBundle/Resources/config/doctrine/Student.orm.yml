@@ -35,3 +35,8 @@ AppBundle\Entity\Student:
         attemptedWords:
             targetEntity: AttemptedWord
             mappedBy: student
+
+    oneToOne:
+        user:
+            targetEntity: User
+            mappedBy: student

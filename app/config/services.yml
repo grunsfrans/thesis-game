@@ -34,6 +34,14 @@ services:
         public: true
         arguments:
                 $entityManager: "@doctrine.orm.entity_manager"
+    tutor:
+            class: AppBundle\Service\Tutor
+            public: true
+            arguments:
+                    $session: "@session"
+                    $em: "@doctrine.orm.entity_manager"
+
+
 
     # add more services, or override services that need manual wiring
     # AppBundle\Service\ExampleService:

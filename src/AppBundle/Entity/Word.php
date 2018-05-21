@@ -20,10 +20,13 @@ class Word
 
     private $length;
 
+    private $difficulty;
+
     public function __construct($text, $frequency){
         $this->text = $text;
         $this->frequency = $frequency;
         $this->length = strlen($this->text);
+        $this->difficulty = 10000000-(((($this->frequency/$this->length) - 386)/10143814)*10000000);
     }
 
     /**
@@ -90,8 +93,22 @@ class Word
         $this->length = $length;
     }
 
-    public function getDifficulty(){
-        return $this->getLength() / $this->getFrequency();
+    /**
+     * @return float|int
+     */
+    public function getDifficulty()
+    {
+        return $this->difficulty;
     }
+
+    /**
+     * @param float|int $difficulty
+     */
+    public function setDifficulty($difficulty)
+    {
+        $this->difficulty = $difficulty;
+    }
+
+
 
 }

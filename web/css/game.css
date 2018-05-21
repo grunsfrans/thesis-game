@@ -1,6 +1,92 @@
 body{
     background: #e9e9e9;
 }
+section.game-main{
+    padding: 0;
+    padding-top: 10px;
+}
+
+section.frontpage , .blur{
+    background-image: url("../img/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: 1920px, 1080px;
+    background-attachment: fixed;
+}
+
+.frontpage{
+    height: 100%;
+    background-position: center top;
+    padding: 70px 90px 120px 90px;
+}
+
+
+.container-white{
+    background: rgba(255,255,255,0.5);
+    border-radius: 5px;
+}
+
+.container-alpha{
+    border-radius: 5px;
+    border: 1px solid transparent;
+    overflow: hidden;
+    padding: 0 !important;
+    box-shadow: 0px 10px 25px 0px rgba(70, 70, 70, 0.25);
+}
+.container-alpha .content{
+    position: relative;
+    z-index: 100;
+    height: 100%;
+    padding: 15px;
+    background: rgba(255,255,255,0.15);
+}
+.container-alpha .content.white{
+    background: rgba(255,255,255,0.3);
+}
+
+.container-center{
+    position: relative;
+    top: 20%
+}
+
+.blur{
+
+    /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99;
+
+    /* Pull the background 70px higher to the same place as #bg's */
+    background-position: center -0px;
+    /*background-size: 200% auto;*/
+
+    filter: blur(10px);
+}
+
+#info{
+    max-height: 0px;
+    overflow: hidden;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    text-align: left;
+    transition: all linear 0.3s;
+}
+
+#info.active{
+    max-height: 400px;
+    height: 100%;
+    padding:10px 10px;
+    margin-bottom: -15px;
+    background: rgba(255,255,255,0.25);
+}
+
 
 #game-scores {
     border-top: 1px solid transparent;
@@ -46,7 +132,7 @@ img.tutor{
 #game-main{
     position: relative;
 }
-#tutor-response{
+[data-tutor]{
     position: absolute;
     left: 45%;
     top: 10%;
@@ -60,7 +146,7 @@ img.tutor{
     border-radius: 5px;
     border-bottom-left-radius: 0px;
 }
-#tutor-response:before {
+[data-tutor]:before {
     content: '';
     position: absolute;
     width: 0;
@@ -71,7 +157,7 @@ img.tutor{
     border-width: 30px 0 0 40px;
     border-color: transparent transparent transparent #209cef;
 }
-#tutor-response:after {
+[data-tutor]:after {
     position: absolute;
     font-weight: bold;
     content: '...';
@@ -81,27 +167,28 @@ img.tutor{
     font-size: 12px;
 }
 
-#tutor-response.exclamation:after{ content: '!'; }
-#tutor-response.question:after{ content: '?'; }
-#tutor-response.pos{  border: 2px solid #23d160;  }
-#tutor-response.pos:before{ border-color: transparent transparent transparent #23d160;}
-#tutor-response.neg{  border: 2px solid #ff3860;  }
-#tutor-response.neg:before{ border-color: transparent transparent transparent #ff3860;}
+[data-tutor].exclamation:after{ content: '!'; }
+[data-tutor].question:after{ content: '?'; }
+[data-tutor].pos{  border: 2px solid #23d160;  }
+[data-tutor].pos:before{ border-color: transparent transparent transparent #23d160;}
+[data-tutor].neg{  border: 2px solid #ff3860;  }
+[data-tutor].neg:before{ border-color: transparent transparent transparent #ff3860;}
 
-#tutor-response span {
+[data-tutor] span {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
+    margin-top: -4px;
 }
 
-#tutor-response-extra{
+[data-tutor-extra]{
     position: absolute;
-    overflow: hidden;
+    overflow: auto;
     opacity: 0;
     left: 45%;
     top: 30%;
     width: 0;
-    height: 0;
+    height: 40px;
     background: #209cf0;
     z-index: 100;
     padding: 7px;
@@ -110,36 +197,60 @@ img.tutor{
     border-radius: 5px;
     text-align: left;
     font-size: 14px;
-    color: whitesmoke;
-    -webkit-transition: width 0.3s ease-in-out ;
-    -moz-transition: width 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
+    color: #209cef;
+    -webkit-transition: width 0.3s ease-in-out, color 0.3s ease-in-out 0.1s, height 0.3s ease ;
+    -moz-transition: width 0.3s ease-in-out, color 0.3s ease-in-out 0.1s, height 0.3s ease;
+    -o-transition: width 0.3s ease-in-out, color 0.3s ease-in-out 0.1s, height 0.3s ease;
+    transition: width 0.3s ease-in-out, color 0.3s ease-in-out 0.1s, height 0.3s ease;
+
 }
-#tutor-response-extra.active{
+[data-tutor-extra].active{
     opacity: 1;
     width: 60%;
-    height: 40px;
+    height: auto;
+    color: whitesmoke;
 }
 
-#tutor-response-extra:after {
+[data-tutor-extra]:after {
     position: absolute;
     font-weight: bold;
-    content: 'i';
+    font-family: "Font Awesome 5 Free";
+    content: "\f129";
     left: 10px;
-    top: 23%;
+    top: 20%;
     color: whitesmoke;
     font-size: 14px;
 }
 
-#tutor-response-extra.exclamation:after{ content: '!'; }
-#tutor-response-extra.question:after{ content: '?'; }
-#tutor-response-extra.pos{  border: 2px solid #23d160; background: #23d160 }
-#tutor-response-extra.neg{  border: 2px solid #ff3860; background: #ff3860 }
+[data-tutor-extra].exclamation:after{ content: '!'; }
+[data-tutor-extra].question:after{ content: '?'; }
+[data-tutor-extra].pos{  border: 2px solid #23d160; background: #23d160 }
+[data-tutor-extra].neg{  border: 2px solid #ff3860; background: #ff3860 }
 
+[data-tutor-extra] span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    margin-top: -4px;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    -webkit-transition: width 0s linear 0.3s, height 0s ease 0.3s;
+    -moz-transition: width 0s linear 0.3s, height 0s ease 0.3s;
+    -ms-transition: width 0s linear 0.3s, height 0s ease 0.3s;
+    -o-transition: width 0s linear 0.3s, height 0s ease 0.3s;
+    transition: width 0s linear 0.3s, height 0s ease 0.3s;
+}
 
+[data-tutor-extra].active span{
+    width: 100%;
+    height: 100%;
+}
 
-
+[data-control]{
+    padding: 15px;
+    font-size: 16px;
+}
 
 #word-container{
     position: relative;
@@ -161,11 +272,17 @@ img.tutor{
 #word.altcorrect{
     color: #209cef;
 }
+#word .button{
+    margin: 10px;
+}
 
 #game-interactions{
     height: 33%;
 }
 
+.button span i{
+    margin-right: 5px;
+}
 
 .btn-round{
     position: relative;
@@ -174,7 +291,11 @@ img.tutor{
     font-size: 14px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
-    border-radius: 40px;
+    border-radius: 50%;
+}
+.btn-round:focus{
+    outline: none;
+    box-shadow: none !important;
 }
 
 .btn-round .btn-round-text{
@@ -201,6 +322,79 @@ img.tutor{
     margin-top: -10px;
 }
 
+.btn-round.main{
+    height: 120px;
+    width: 120px;
+    margin: 20px;
+    background: transparent;
+    border: 2px solid rgba(70,70,70,0.25);
+    color: rgba(70,70,70,0.25);
+    font-size: 20px;
+    transition: all ease-in 0.1s;
+}
+.btn-round.main:hover{
+    background: rgba(255,255,255,0.25);
+    color: rgba(70,70,70,0.5);
+}
+.btn-round.main:active, .btn-round.main.active{
+    background: rgba(255,255,255,0.5);
+    color: #ccaf60;
+    border-color: #ccaf60;
+}
+
+.btn-round.main.in:active, .btn-round.main.in.active{
+    background: rgba(255,255,255,0.5);
+    color: #0472b0;
+    border-color: #0472b0;
+}
+
+
+.btn-round.main.me{
+    background-image: url("../img/me.jpg");
+    background-size: contain;
+    filter: grayscale(90%);
+    border: 0;
+
+}
+.btn-round.main.me:hover, .btn-round.main.me:active, .btn-round.main.me.active{
+    filter: grayscale(0%);
+}
+
+
+
+
+.pick-one {
+    display: inline-block;
+    overflow: hidden;
+    margin:5px;
+    background-color:#EFEFEF;
+    border-radius:20px;
+    border:1px solid #D0D0D0;
+}
+
+
+.pick-one label span {
+    text-align:center;
+    padding:0 10px;
+    display:block;
+    cursor: pointer;
+}
+
+.pick-one label input {
+   display: none;
+}
+
+.pick-one .input-checked /*, .bounds input:checked + span works for firefox and ie9 but breaks js for ie8(ONLY) */ {
+    background-color:#209cef;
+    color:#F7F7F7;
+}
+
+
 .footer{
     height: 150px;
 }
+
+
+
+
+/*trnsl.1.1.20180513T094640Z.8cef691330965029.04d88ddf00f3b83c7c400e9c1161da8b5cbc2138*/

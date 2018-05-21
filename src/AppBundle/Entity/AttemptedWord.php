@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: frans
- * Date: 08-12-17
- * Time: 13:33
- */
+
 
 namespace AppBundle\Entity;
 
@@ -31,8 +26,8 @@ class AttemptedWord
         $this->student = $student;
         $this->word = $word;
         $this->reactiontime = $answer->reactiontime;
-        $this->skipped = 0;
-        $this->helped = 0;
+        $this->skipped = $answer->skipped;
+        $this->helped = $answer->helped;
         $this->incorrect = !$is_correct_answer;
     }
 

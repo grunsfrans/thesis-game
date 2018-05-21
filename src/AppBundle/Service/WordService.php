@@ -10,13 +10,27 @@ class WordService
 {
     protected $em;
 
+    private $max_difficulties = [0,9988376, 9994959, 9997019, 9998172, 9998800, 9999200, 9999522, 10000000];
+
     public function __construct(EntityManager $entityManager)
     {
         $this->em = $entityManager;
     }
 
     public function getWordForStudent(Student $student){
-        return $this->randomWord();
+        $lvl = $student->getCurrentLevel();
+        $sql = "SELECT id FROM word w WHERE difficulty BETWEEN :min AND :max";
+        $conn = $this->em->getConnection();
+        $prep = $conn->prepare($sql);
+        $prep->execute(['min' => $this->max_difficulties[$lvl-1] , 'max' => $this->max_difficulties[$lvl]]);
+        $ids = $prep->fetchAll();
+        $id = $ids[rand(0, count($ids)-1)];
+        $word = $this->em->getRepository(Word::class)->find($id);
+        return $word;
+    }
+
+    public function getWordById($id){
+        return $this->em->getRepository(Word::class)->find($id);
     }
 
     public function randomWord(){
@@ -30,15 +44,18 @@ class WordService
 
     }
 
-    public function changeLetters(Word $word){
-        $functions = ["redactLetters", "swapRandomLetters"];
-        $f = $functions[rand(0,count($functions)-1)];
-        return $this->$f($word);
+    public function swapLettersWithProbability(Word $word, $prob=0.5){
+        if((rand(1,10)/10) > $prob){
+            $text = $this->swapLetters($word);
+        } else{
+          $text = $word->getText();
+        }
+        return $text;
     }
 
     public function redactLetters(Word $word){
         $redacted = $word->getText();
-        $number_of_redactions = rand(1, $word->getLength() -2);
+        $number_of_redactions = rand(1, $word->getLength() /2);
         $redact_positions = $this->randomPositionsInWord($word, $number_of_redactions);
         foreach ($redact_positions as $position){
             $redacted = substr_replace($redacted, '.', $position, 1);
@@ -46,7 +63,25 @@ class WordService
         return $redacted;
     }
 
-    public function swapCombinations(Word $word){
+    public function shuffleLetters(Word $word, $numberOfLetters = 0){
+        $numberOfLetters = $numberOfLetters < 2 ? $word->getLength() : $numberOfLetters;
+        $shuffled = $word->getText();
+        $start = $word->getLength() > 3 ? 1 : 0;
+        $end = $word->getLength() > 3 ? $word->getLength()-3 : $word->getLength()-1;
+        $counter = 0;
+        do {
+            $counter++;
+            if ( $position = rand($start , $end) ){
+                $to_be_swapped = substr($shuffled, $position, rand(0, $numberOfLetters - $position - 1));
+                $shuffled = str_replace($to_be_swapped, str_shuffle($to_be_swapped), $shuffled);
+            } else{
+                break;
+            }
+        } while( $shuffled == $word->getText() && $counter < 10);
+        return $shuffled;
+    }
+
+    public function swapLetters(Word $word){
         $swapped = $word->getText();
         $combinations = ["ae","ea","th","gh","io","oi"];
         foreach ($combinations as $combination){
@@ -57,23 +92,24 @@ class WordService
                 }
             }
         }
+        if ($swapped == $word->getText()){
+            $swapped = $this->shuffleLetters($word);
+        }
         return $swapped;
     }
 
-    public function swapRandomLetters(Word $word){
-        $text = $word->getText();
-        if ( $position = rand(1 , $word->getLength()-3) ){
-            $to_be_swapped = substr($text, $position, rand(2, $word->getLength() - $position - 1));
-            $text = str_replace($to_be_swapped, str_shuffle($to_be_swapped), $text);
-        }
-        return $text;
+    public function twoWordsFrom(Word $word){
+        $misspelled_word = $this->swapLetters($word);
+        $words = [$word->getText(), $misspelled_word];
+        shuffle($words);
+        return $words;
     }
 
 
     private function randomPositionsInWord(Word $word, $number){
         $positions = [];
         while(count($positions)< $number){
-          $position = rand(0, $word->getLength());
+          $position = rand(1, $word->getLength()-2);
           if (!in_array($position,$positions)){
               array_push($positions, $position);
           }
