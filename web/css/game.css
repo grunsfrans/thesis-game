@@ -9,7 +9,7 @@ section.game-main{
 section.frontpage , .blur{
     background-image: url("../img/bg1.jpg");
     background-repeat: no-repeat;
-    background-size: 1920px, 1080px;
+    background-size: cover;
     background-attachment: fixed;
 }
 

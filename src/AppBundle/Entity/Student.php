@@ -31,6 +31,7 @@ class Student
     private $attemptedWords;
 
     public function __construct(){
+        $this->experimental = rand(0,1);
         $this->currentLevel = 1;
         $this->highestLevel = 1;
         $this->timePlayed = 0;
