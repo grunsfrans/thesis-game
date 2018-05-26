@@ -19,12 +19,15 @@ html, .blur{
     opacity: 0.9;
 }
 
-.frontpage{
+html, .frontpage{
     background-position: center top;
-    padding: 70px 90px 120px 90px;
-    margin-bottom: 15px;
+
+    /*margin-bottom: 15px;*/
 }
 
+.frontpage{
+    padding: 70px 90px 120px 90px;
+}
 
 .container-white{
     background: rgba(255,255,255,0.5);
@@ -87,7 +90,7 @@ html, .blur{
 }
 
 #info.active{
-    max-height: 400px;
+    max-height: 1000px;
     height: 100%;
     padding:10px 10px;
     margin-bottom: -15px;
