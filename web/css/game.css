@@ -35,6 +35,7 @@ html, .frontpage{
 }
 
 .container-alpha{
+    position: relative;
     border-radius: 5px;
     border: 1px solid transparent;
     overflow: hidden;
@@ -76,24 +77,25 @@ html, .frontpage{
 
 #info{
     max-height: 0px;
+    position: relative;
+    bottom: 0px;
     overflow: hidden;
-    padding: 10px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0px 10px;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: -15px;
     margin-left: -15px;
     margin-right: -15px;
     text-align: left;
     background: rgba(255,255,255,0.4);
-    transition: all ease-in 0.3s;
+    transition: all ease-in-out 0.3s;
 }
 
 #info.active{
     max-height: 1000px;
-    height: 100%;
+    /*height: 100%;*/
     padding:10px 10px;
-    margin-bottom: -15px;
+
+    /*margin-bottom: -15px;*/
 }
 
 #info.small-text{

@@ -331,7 +331,7 @@ function gameOver() {
 
 /// frontpage
 
-$(".btn-round.main").on('click', function () {
+$(".btn-round.main").on('click', function (e) {
     toggle = $(this).hasClass('active');
     info = $('#info')
     btns = $('.btn-round.main');
@@ -358,7 +358,6 @@ $(function () {
             clearTimeout(timeout);
         })
     })
-
 });
 
 

@@ -7,7 +7,7 @@
             <h3 class="title" style="margin-top: 0">
                 Inloggen
             </h3>
-            <form style="margin-bottom: 15px" class="has-text-left" action="{{ path('login') }}" method="post">
+            <form style="margin-bottom: 35px" class="has-text-left" action="{{ path('login') }}" method="post">
                 <div class="field">
                     <label class="label" for="username">Gebruiker:</label>
                     <input class="input" type="text" id="username" name="_username" value="{{ last_username }}" />
@@ -22,10 +22,11 @@
                 <input type="hidden" name="_target_path" value="/game" />
                 <div class="control ">
 
-                    <button class="button is-info"  type="submit">login</button>
+                    <button class="button is-info is-pulled-right"  type="submit">login</button>
                 </div>
 
             </form>
+    <br>
     <div id="info" class="active has-text-centered small-text">
         Log hier in met je gebruikersnaam en wachtwoord om het spel te kunnen spelen.
         <br> <br> Als je nog geen inloggegevens hebt ontvangen, kun je jezelf ook <a class=" is-text" href="{{ path('user_register') }}" >registeren</a>.
