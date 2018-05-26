@@ -2,6 +2,7 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Entity\AttemptedWord;
 use AppBundle\Entity\Game;
 use AppBundle\Entity\Message;
 use AppBundle\Entity\Student;
@@ -22,20 +23,34 @@ class Tutor extends Controller {
 
     public function prepareFor(Student $student){
         $this->student = $student;
-        $this->control = $this->student->getExperimental() ? "" : "CONT_";
+        $this->control = $this->student->getExperimental() ? "" : "CONTR_";
     }
 
     public function welcomeStudent(){
-        $message = $this->getMessage( $this->control."WELCOME");
-        $hint = $this->getMessage("WELCOME_HINT");
-        $this->insertValuesInMessage($message);
+        if (count($this->student->getGames()) < 1){
+            $message = $this->getMessage( $this->control."WELCOME_INIT");
+            $hint = $this->getMessage("WELCOME_INIT_HINT");
+        } else if ($time= $this->student->getActiveGame()->getTimePlayed() > 3){
+            $message = $this->getMessage( $this->control."WELCOME_RESUME");
+            $hint = $this->getMessage("WELCOME_RESUME_HINT");
+        } else {
+            $message = $this->getMessage( $this->control."WELCOME");
+            $hint = $this->getMessage("WELCOME_HINT");
+        }
+
+        $this->insertValuesInMessages([$message, $hint]);
         return [$message->toArray(), $hint->toArray()];
     }
 
     public function messageForQuestion($question){
         $answer_type = $question["answer_type"];
         $message = $this->getMessage($answer_type);
-        return [$message->toArray(), NULL];
+        $hint = NULL;
+        $helped = $this->em->getRepository(AttemptedWord::class)->findOneBy(['id'=>$question['target_word'], 'helped'=>1], ['id' => 'DESC']);
+        if ($helped){
+            $hint = $this->getMessage("HELPED_HINT");
+        }
+        return [$message->toArray(), $hint== NULL ? NULL : $hint->toArray()];
 
     }
 
@@ -43,7 +58,7 @@ class Tutor extends Controller {
         $this->question = $question;
         if ($this->control){
             if ($answer->skipped == 1){
-                $message = $this->getMessage("CONT_SKIPPED");
+                $message = $this->getMessage("CONTR_SKIPPED");
                 $this->insertValuesInMessage($message);
                 return [$message->toArray()];
             }
@@ -61,6 +76,7 @@ class Tutor extends Controller {
                 case 1:
                     $message = $this->getMessage("ANS_CORR");
                     $hint = $this->getMessage("ANS_CORR_HINT");
+                    $this->decreaseHelpfulness();
                     break;
                 case 2:
                     $message = $this->getMessage("ANS_ALTCORR");
@@ -78,6 +94,24 @@ class Tutor extends Controller {
 
     }
 
+
+    public function getHelpfulness(){
+        return $this->session->get('helpfulness');
+    }
+
+    public function increaseHelpfulness(){
+        if ($this->session->get('helpfulness') < 1){
+            $helpfulness = $this->session->get('helpfulness') + 0.1;
+            $this->session->set('helpfulness', $helpfulness);
+        }
+    }
+
+    public function decreaseHelpfulness(){
+        if ($this->session->get('helpfulness') > 0){
+            $helpfulness = $this->session->get('helpfulness') - 0.02;
+            $this->session->set('helpfulness', $helpfulness);
+        }
+    }
 
     public function getMessage($type){
         $messages = $this->em->getRepository(Message::class)->findBy(['type' => $type]);

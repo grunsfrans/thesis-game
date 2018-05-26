@@ -33,31 +33,34 @@ function showAnswerResult(answer, result) {
     }
     word = $( "#word" );
     word.html( result['answer'] );
+    answer_is_equal = result['answer']  == result['target']
     if (skipped){
         word.html( result['answer'] ).addClass( 'altcorrect');
     } else {
         switch (result['correct']){
             case 1:
-                result['target'] == result['answer']  ? showCorrect() : showIncorrect();
+                showCorrect(answer_is_equal);
                 break;
             case 2:
                 showAltCorrect();
+                $('#word').append("<br><span style='color: #333'>("+result['target']+")</span>");
                 break;
             default:
-                result['target'] == result['answer'] ? showCorrect() : showIncorrect();
+                showIncorrect(answer_is_equal);
+                $('#word').append("<br><span style='color: #333'>("+result['target']+")</span>");
                 break;
         }
     }
 }
 
-function showCorrect() {
+function showCorrect(equal) {
     $('[data-control]').html('<span><i style="color: #23d160" class="fa fa-check"></i></span>')
-    $('#word').addClass('correct');
+    $('#word').addClass(equal ? 'correct' : 'incorrect');
 }
 
-function showIncorrect() {
+function showIncorrect(equal) {
     $('[data-control]').html('<span><i style="color: #ff3860" class="fa fa-times"></i></span>')
-    $('#word').addClass('incorrect');
+    $('#word').addClass(equal ? 'correct' : 'incorrect');
 }
 
 function showAltCorrect() {
@@ -345,34 +348,55 @@ $(".btn-round.main").on('click', function () {
 })
 
 $(function () {
+    timeouts =[];
     $.each($(".btn-round.main"), function (index, btn) {
-        setTimeout(function () { $(btn).addClass('active'); },1500*(index+1));
-        setTimeout(function () { $(btn).removeClass('active'); },1500*(index+1)+1500);
+        timeouts.push(setTimeout(function () { $(btn).addClass('active'); },800*(index+1)));
+        timeouts.push(setTimeout(function () { $(btn).removeClass('active'); },800*(index+1)+800));
     });
+    $('.frontpage').on('click', function () {
+        $.each(timeouts, function (i, timeout) {
+            clearTimeout(timeout);
+        })
+    })
+
 });
 
 
 
 function showMe() {
     html = "<h1>Over mij</h1>" +
-        "<a class='button is-info btn-round'><i class='fab fa-facebook-f'></i></a> ";
+        "Leuk dat je komt kijken op mijn website! <br>" +
+        "Zoals je ziet is het nogal een simpele site met 3 knoppen. Waarvan je nu dus al de eerste hebt ondekt. Heel goed! 👍 <br><br>" +
+        "Aangezien je deze site hebt weten te vinden, ken je mijn naam al. Maar omdat jij het bent mag je me gewoon bij mijn voornaam - Frans - noemen.<br>" +
+        "Ik ben 30 jaar oud, woon in Arnhem en werk bij <a href='http://flitsmeister.nl' target='_blank'> het meest flitsende bedrijf van Nederland</a>. <br>" +
+        "Mijn vrijetijdsbesteding bestaat momenteel vooral uit het afronden van m'n studie. Meer hierover vind je onder de tweede knop.<br>" +
+        "Het zou erg fijn zijn als je daar zometeen even gaat kijken. Als bedankje krijg je de mogelijkheid om proefpersoon te worden in mijn scriptieonderzoek." +
+        "<br><br> Ik zou je nog veel meer wiilen vertellen maar daar heb ik nu echt de tijd niet voor. <br> En daarbij, zo interessant ben ik nu ook weer niet." +
+        "<br><br>Als je nou toch meer wil weten, zou je een poging kunnen wagen op FB, of kunnen kijken wat er onder de derde knop te vinden is. 😉" +
+        "<a class='button is-info is-fb btn-round is-pulled-right' href='https://www.facebook.com/grunsfrans' target='_blank'><i class='fab fa-facebook-f'></i></a> ";
     $('#info').html(html);
 }
 
 function showThesis() {
     html = "<h1>Thesis Onderzoek</h1>" +
-        "Momenteel ben ik bezig om mijn studie Artificial Intelligence (AI) aan de Radboud Universiteit Nijmegen af te ronden.<br>" +
+        "Ik ben al een tijdje bezig om mijn studie Artificial Intelligence (AI) aan de Radboud Universiteit Nijmegen af te ronden.<br>" +
         "Voor mijn Bachelorthesis heb ik een online 'educational game' (educatief spel) ontwikkeld waarmee ik het onderzoek" +
-        " wil doen naar leerprestaties onder bepaalde invloeden.<br>" +
-        "In het spel is het de bedoeling om binnen 5 minuten zoveel mogelijk Engelse woorden correct te beoordelen of spellen." +
-        "<br><a class='button is-warning ' style='margin-top: 15px' href='/game' target='_blank'><i class='fa fa-graduation-cap'></i>Doe mee</a> ";
+        " wil doen naar leerprestaties onder bepaalde invloeden.<br><br>" +
+        "In het spel is het de bedoeling om binnen 5 minuten zoveel mogelijk Engelse woorden correct te beoordelen of te spellen.<br>" +
+        "Met elk goed andwoord scoor je punten. Als je genoeg punten haalt kom je in een hoger level en worden de woorden moeilijker.<br>" +
+        "Het hoogst haalbare level is 8. Lukt jou dit? Zo niet, dan kun je het gewoon  nog eens proberen.   <br><br>" +
+        "Zou jij, gewoon voor de uitdaging, of anders voor de actie: \"Help Frans aan een diploma\", mee willen doen aan mijn onderzoek? <br> Dankjewel!" +
+        "<br><a class='button is-warning is-medium is-pulled-right is-semi-trans ' style='margin-top: 15px'" +
+        "href='/game' target='_blank'><span><i class='fa fa-graduation-cap'></i></span>Doe mee</a> ";
     $('#info').html(html);
 
 }
 
 function showCV() {
     html = "<h1>Curriculum Vitae</h1>" +
-        "<a class='button btn-round is-info' type='button' href='https://www.linkedin.com/in/fvg1988' target='_blank'> <i class='fab fa-linkedin-in'></i></a> ";
+        "Binnenkort komt hier een mooi overzichtje van wat ik allemaal heb gedaan en kan. <br>" +
+        "Voor nu zul je het met mijn linkedin moeten doen. Excuses hiervoor." +
+        "<a class='button btn-round is-info is-lnkin is-pulled-right' type='button' href='https://www.linkedin.com/in/fvg1988' target='_blank'> <i class='fab fa-linkedin-in'></i></a> ";
     $('#info').html(html);
 }
 

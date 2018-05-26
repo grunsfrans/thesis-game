@@ -1,22 +1,28 @@
-body{
-    background: #e9e9e9;
-}
+
+
 section.game-main{
     padding: 0;
     padding-top: 10px;
 }
 
-section.frontpage , .blur{
+html, .blur{
     background-image: url("../img/bg1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
+.is-semi-trans{
+    opacity: 0.75;
+}
+.is-semi-trans:hover, .is-semi-trans:active{
+    opacity: 0.9;
+}
+
 .frontpage{
-    height: 100%;
     background-position: center top;
     padding: 70px 90px 120px 90px;
+    margin-bottom: 15px;
 }
 
 
@@ -76,7 +82,8 @@ section.frontpage , .blur{
     margin-left: -15px;
     margin-right: -15px;
     text-align: left;
-    transition: all linear 0.3s;
+    background: rgba(255,255,255,0.4);
+    transition: all ease-in 0.3s;
 }
 
 #info.active{
@@ -84,10 +91,11 @@ section.frontpage , .blur{
     height: 100%;
     padding:10px 10px;
     margin-bottom: -15px;
-    background: rgba(255,255,255,0.25);
 }
 
-
+#info.small-text{
+    font-size: 12px;
+}
 #game-scores {
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
@@ -97,6 +105,12 @@ section.frontpage , .blur{
     box-sizing: border-box;
     line-height: 50px;
     font-size: 16px;
+}
+
+.game-menu{
+    width: 33%;
+    margin: auto;
+    min-width: 250px;
 }
 
 .level-title{
@@ -131,6 +145,7 @@ img.tutor{
 }
 #game-main{
     position: relative;
+    /*background: #e9e9e9;*/
 }
 [data-tutor]{
     position: absolute;
@@ -250,6 +265,7 @@ img.tutor{
 [data-control]{
     padding: 15px;
     font-size: 16px;
+    background: #e9e9e9;
 }
 
 #word-container{
@@ -258,7 +274,7 @@ img.tutor{
 }
 #word {
     height: 150px;
-    line-height: 50px;
+    /*line-height: 50px;*/
     padding: 50px;
     font-size: 22px;
     text-align: center;
@@ -335,11 +351,13 @@ img.tutor{
 .btn-round.main:hover{
     background: rgba(255,255,255,0.25);
     color: rgba(70,70,70,0.5);
+    box-shadow: 0px 1px 5px 0px;
 }
 .btn-round.main:active, .btn-round.main.active{
     background: rgba(255,255,255,0.5);
     color: #ccaf60;
     border-color: #ccaf60;
+    box-shadow: 0px 1px 5px 0px;
 }
 
 .btn-round.main.in:active, .btn-round.main.in.active{
@@ -395,6 +413,13 @@ img.tutor{
 }
 
 
+.btn-round.is-lnkin{
+    background: #0472b0;
+}
+.btn-round.is-fb{
+    background: #415e9b;
+}
+#415e9b
 
 
 /*trnsl.1.1.20180513T094640Z.8cef691330965029.04d88ddf00f3b83c7c400e9c1161da8b5cbc2138*/

@@ -61,6 +61,7 @@ class GameController extends Controller{
 
     public function nextQuestionAction(Request $request, Session $session, WordService $ws){
         $this->initGameParams();
+//        print_r($session->get('helpfulness'));
         $this->wordservice = $ws;
         $question = $this->getNextQuestion();
         $session->set("question", ['word' => $question['word'], 'target_word' => $question['target_word'], 'answer_type' => $question['answer_type']]);
@@ -82,6 +83,7 @@ class GameController extends Controller{
 
     public function helpAction(Request $request, Session $session){
         $this->initGameParams();
+        $this->tutor->increaseHelpfulness();
         $wordid = $session->get('question')['target_word'];
         $word = $this->getDoctrine()->getRepository(Word::class)->find($wordid)->getText();
         $ch = curl_init();
@@ -92,7 +94,7 @@ class GameController extends Controller{
             "key=trnsl.1.1.20180513T094640Z.8cef691330965029.04d88ddf00f3b83c7c400e9c1161da8b5cbc2138&amp;text=".$word."&amp;lang=en-nl");
         $resp = curl_exec($ch);
         if ($this->student->getExperimental()){
-            $resp['exp'] = 1;
+            $resp = substr($resp, 0, -1) . ', "exp" : 1}';
         }
         return new JsonResponse( $resp );
 
@@ -108,7 +110,7 @@ class GameController extends Controller{
     }
 
     private function getNextQuestion(){
-        $target_word = $this->wordservice->getWordForStudent($this->student);
+        $target_word = $this->wordservice->getWordForStudent($this->student, $this->tutor->getHelpfulness());
         $answer_type = $this->randomAnswerType();
         $question = $this->generateQuestion($target_word, $answer_type);
         return $question;
@@ -228,7 +230,7 @@ class GameController extends Controller{
         if ($is_correct_answer){
             $score = 1 *  $this->game->getLevel();
         } else{
-            $score = -1;
+            $score = -1 * $this->game->getLevel();
         }
         return $score;
     }

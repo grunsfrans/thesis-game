@@ -29,11 +29,21 @@ class UserController extends Controller {
     }
 
     public function showAction(Request $request, User $id){
+        $current_user = $this->getUser();
         $user = $this->getDoctrine()
             ->getRepository(User::class)->find($id);
-        return $this->render('user/show.html.twig', [
-            'user' => $user
-        ]);
+        if($user && ($current_user->getId() == $id || $current_user->getUsername() == "super")){
+            return $this->render('user/show.html.twig', [
+                'user' => $user
+            ]);
+        } else{
+            $this->addFlash(
+                'error',
+                'Niet gerechtigd'
+            );
+            return $this->redirectToRoute('game_landing');
+        }
+
     }
 
     public function registerAction(Request $request, UserPasswordEncoderInterface $passwordEncoder){

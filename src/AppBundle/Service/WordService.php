@@ -2,6 +2,7 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Entity\AttemptedWord;
 use AppBundle\Entity\Student;
 use AppBundle\Entity\Word;
 use Doctrine\ORM\EntityManager;
@@ -17,15 +18,21 @@ class WordService
         $this->em = $entityManager;
     }
 
-    public function getWordForStudent(Student $student){
-        $lvl = $student->getCurrentLevel();
-        $sql = "SELECT id FROM word w WHERE difficulty BETWEEN :min AND :max";
-        $conn = $this->em->getConnection();
-        $prep = $conn->prepare($sql);
-        $prep->execute(['min' => $this->max_difficulties[$lvl-1] , 'max' => $this->max_difficulties[$lvl]]);
-        $ids = $prep->fetchAll();
-        $id = $ids[rand(0, count($ids)-1)];
-        $word = $this->em->getRepository(Word::class)->find($id);
+    public function getWordForStudent(Student $student, $help = 0){
+        if((rand(1,10)/10) < $help){
+            $helped = $this->em->getRepository(AttemptedWord::class)->findBy(['helped' => 1]);
+            $wordid = $helped[rand(0, count($helped))]->getId();
+            $word = $this->em->getRepository(Word::class)->find($wordid);
+        } else{
+            $lvl = $student->getCurrentLevel();
+            $sql = "SELECT id FROM word w WHERE difficulty BETWEEN :min AND :max";
+            $conn = $this->em->getConnection();
+            $prep = $conn->prepare($sql);
+            $prep->execute(['min' => $this->max_difficulties[$lvl-1] , 'max' => $this->max_difficulties[$lvl]]);
+            $ids = $prep->fetchAll();
+            $id = $ids[rand(0, count($ids)-1)];
+            $word = $this->em->getRepository(Word::class)->find($id);
+        }
         return $word;
     }
 
@@ -34,7 +41,7 @@ class WordService
     }
 
     public function randomWord(){
-        $random_id = rand(1,5000);
+        $random_id = rand(1,4999);
         $word = $this->em->getRepository(Word::class)->find($random_id);
         return $word;
     }

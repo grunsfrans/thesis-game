@@ -34,7 +34,7 @@ security:
     access_control:
         - { path: ^/game/user/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/game/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/game/, roles:  IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/game/, roles: IS_AUTHENTICATED_FULLY }
 
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
