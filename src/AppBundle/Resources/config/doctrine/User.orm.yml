@@ -9,7 +9,7 @@ AppBundle\Entity\User:
     fields:
         username:
             type: string
-            length: 25
+            length: 100
             unique: true
         password:
             type: string
