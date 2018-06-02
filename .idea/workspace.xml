@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99c6ed73-ea2f-4faf-9a10-df8f4aa05db9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Service/WordService.php" afterPath="$PROJECT_DIR$/src/AppBundle/Service/WordService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/game.js" afterPath="$PROJECT_DIR$/web/js/game.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,15 +59,15 @@
       <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="217" column="22" lean-forward="false" selection-start-line="217" selection-start-column="22" selection-end-line="217" selection-end-column="22" />
+            <state relative-caret-position="450">
+              <caret line="411" column="118" lean-forward="false" selection-start-line="411" selection-start-column="118" selection-end-line="411" selection-end-column="118" />
               <folding>
-                <marker date="1527944508754" expanded="true" signature="2120:2131" ph="..." />
-                <marker date="1527944508754" expanded="true" signature="2401:2412" ph="..." />
-                <marker date="1527944508754" expanded="true" signature="2583:2597" ph="..." />
-                <marker date="1527944508754" expanded="true" signature="2772:2786" ph="..." />
-                <marker date="1527944508754" expanded="true" signature="2957:2971" ph="..." />
-                <marker date="1527944508754" expanded="true" signature="15328:15344" ph="..." />
+                <marker date="1527945021859" expanded="true" signature="2120:2131" ph="..." />
+                <marker date="1527945021859" expanded="true" signature="2401:2412" ph="..." />
+                <marker date="1527945021859" expanded="true" signature="2583:2597" ph="..." />
+                <marker date="1527945021859" expanded="true" signature="2772:2786" ph="..." />
+                <marker date="1527945021859" expanded="true" signature="2957:2971" ph="..." />
+                <marker date="1527945021859" expanded="true" signature="15343:15359" ph="..." />
               </folding>
             </state>
           </provider>
@@ -92,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="311" column="25" lean-forward="true" selection-start-line="311" selection-start-column="25" selection-end-line="311" selection-end-column="25" />
+              <caret line="311" column="25" lean-forward="false" selection-start-line="311" selection-start-column="25" selection-end-line="311" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -523,12 +520,12 @@
       <workItem from="1524470068334" duration="109583000" />
       <workItem from="1526111145470" duration="67080000" />
       <workItem from="1527901497144" duration="102000" />
-      <workItem from="1527932747070" duration="9156000" />
+      <workItem from="1527932747070" duration="9374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="474079000" />
+    <option name="totallyTimeSpent" value="474297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -919,22 +916,22 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="311" column="25" lean-forward="true" selection-start-line="311" selection-start-column="25" selection-end-line="311" selection-end-column="25" />
+          <caret line="311" column="25" lean-forward="false" selection-start-line="311" selection-start-column="25" selection-end-line="311" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="217" column="22" lean-forward="false" selection-start-line="217" selection-start-column="22" selection-end-line="217" selection-end-column="22" />
+        <state relative-caret-position="450">
+          <caret line="411" column="118" lean-forward="false" selection-start-line="411" selection-start-column="118" selection-end-line="411" selection-end-column="118" />
           <folding>
-            <marker date="1527944508754" expanded="true" signature="2120:2131" ph="..." />
-            <marker date="1527944508754" expanded="true" signature="2401:2412" ph="..." />
-            <marker date="1527944508754" expanded="true" signature="2583:2597" ph="..." />
-            <marker date="1527944508754" expanded="true" signature="2772:2786" ph="..." />
-            <marker date="1527944508754" expanded="true" signature="2957:2971" ph="..." />
-            <marker date="1527944508754" expanded="true" signature="15328:15344" ph="..." />
+            <marker date="1527945021859" expanded="true" signature="2120:2131" ph="..." />
+            <marker date="1527945021859" expanded="true" signature="2401:2412" ph="..." />
+            <marker date="1527945021859" expanded="true" signature="2583:2597" ph="..." />
+            <marker date="1527945021859" expanded="true" signature="2772:2786" ph="..." />
+            <marker date="1527945021859" expanded="true" signature="2957:2971" ph="..." />
+            <marker date="1527945021859" expanded="true" signature="15343:15359" ph="..." />
           </folding>
         </state>
       </provider>
