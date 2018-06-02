@@ -100,7 +100,7 @@ class WordService
             }
         }
         if ($swapped == $word->getText()){
-            $swapped = $this->shuffleLetters($word);
+            $swapped = $this->shuffleLetters($word, 2);
         }
         return $swapped;
     }

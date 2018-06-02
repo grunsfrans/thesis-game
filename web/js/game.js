@@ -3,6 +3,15 @@ var nxtbtn = '<button id="next" class="button btn-round big is-success " type="b
     '<span class="btn-round-text">Volgende</span>' +
     '</button>';
 
+var celebrate = [   ["Hee, wat gebeurt er met me?!", "Oei ik groei"], ["Ow yeah! dit voelt veel beter.", "Ga alsjeblieft zo door wil je"],
+                    ["Hee, ik zie nu veel meer. Yes!", "Wat 'n stukje glas al niet kan doen"],
+                    ["Aah! Veel beter dit.", "Dit ziet er iets normaler uit"],
+                    ["En, wat vind je van m'n nieuwe kapsel?", "Hoe hip ben ik!"],
+                    ["Misschien is 'n ook snor wel wat ja.", "Me and my Mustache"],
+                    ["Jippie! Je hebt gewonnen! Thanks!", "Je bent echt Frantastisch!!"]
+                ];
+
+
 var gametimer
 var time_started;
 var time_left;
@@ -43,11 +52,15 @@ function showAnswerResult(answer, result) {
                 break;
             case 2:
                 showAltCorrect();
-                $('#word').append("<br><span style='color: #333'>("+result['target']+")</span>");
+                if(result['tutor_output'][0] == "controlgroup") {
+                    $('#word').append("<br><span style='color: #333'>(" + result['target'] + ")</span>");
+                }
                 break;
             default:
                 showIncorrect(answer_is_equal);
-                $('#word').append("<br><span style='color: #333'>("+result['target']+")</span>");
+                if(result['tutor_output'][0] == "controlgroup"){
+                    $('#word').append("<br><span style='color: #333'>("+result['target']+")</span>");
+                }
                 break;
         }
     }
@@ -100,7 +113,7 @@ function showSepparateSentences(msg, extra) {
 function showHint(text, mood) {
     hintcont = $('#game-response-extra span');
     hintcont.html(text).parent().removeClass().addClass('active '  + mood);
-    timeouts.push(setTimeout(function () { hintcont.html('').parent().removeClass(); },3000));
+    timeouts.push(setTimeout(function () { hintcont.html('').parent().removeClass(); },6000));
 }
 
 
@@ -181,26 +194,28 @@ function checkGuessFull() {
 
 
 function changeTutor(level){
-    if (level != 0 && level != null){
+    if (level != 0 && level != null) {
         var tutor = $('.tutor');
         var current_level = tutor.attr('data-lvl');
         var new_level = Number(current_level) + level;
-        var new_tutor_img = "/img/tutors/"+ new_level + ".png";
+        var new_tutor_img = "/img/tutors/" + new_level + ".png";
         tutor.fadeOut(1000, function () {
             tutor.attr("src", new_tutor_img);
             tutor.attr("data-lvl", new_level);
             tutor.fadeIn(1000);
         });
-        if (level>0){
+        if (level > 0) {
             cancelAllTimeouts();
-            msg = "Yes! Dit voelt veel beter!"
-            $('[data-tutor] span').html(msg).addClass('pos');
-            showHint("Dankjewel!", 'pos');
-        }else if (level<0) {
-            cancelAllTimeouts();
-            msg = "Onee! "
+            msg = celebrate[new_level - 2][0];
+            $('[data-tutor]').addClass('pos');
+            $('[data-tutor] span').html(msg);
+            showHint(celebrate[new_level - 2][1], 'pos');
+        } else if (level < 0) {
             $('[data-tutor] span').html(msg).addClass('neg');
             showHint("Dit doet pijn hoor!", 'neg');
+        }
+        if (new_level == 8){
+            gameWon();
         }
     }
 }
@@ -328,6 +343,17 @@ function gameOver() {
     })
 }
 
+function gameWon() {
+    playtime = Math.floor(($.now() - time_started)/1000);
+    $.post("end", JSON.stringify({playtime: playtime}),function (data){
+        stopCounting();
+        btns = '<p>Gewonnen!</p>' +
+            '<a class="button is-warning" href="/game"><span><i class="fa fa-arrow-left"></i>Menu</span></a>' +
+            '<a class="button is-success" href="/game/new"><span><i class="fa fa-robot"></i>Nieuw spel</span></a>'
+        $("#word").html(btns);
+        $("#game-interactions").html('');
+    })
+}
 
 /// frontpage
 
@@ -370,8 +396,8 @@ function showMe() {
         "Ik ben 30 jaar oud, woon in Arnhem en werk bij <a href='http://flitsmeister.nl' target='_blank'> het meest flitsende bedrijf van Nederland</a>. <br>" +
         "Mijn vrijetijdsbesteding bestaat momenteel vooral uit het afronden van m'n studie. Meer hierover vind je onder de tweede knop.<br>" +
         "Het zou erg fijn zijn als je daar zometeen even gaat kijken. Als bedankje krijg je de mogelijkheid om proefpersoon te worden in mijn scriptieonderzoek." +
-        "<br><br> Ik zou je nog veel meer wiilen vertellen maar daar heb ik nu echt de tijd niet voor. <br> En daarbij, zo interessant ben ik nu ook weer niet." +
-        "<br><br>Als je nou toch meer wil weten, zou je een poging kunnen wagen op FB, of kunnen kijken wat er onder de derde knop te vinden is. 😉" +
+        "<br><br> Ik zou je nog veel meer wiilen vertellen, maar daar heb ik nu echt de tijd niet voor. <br> En daarbij, zo interessant ben ik nu ook weer niet." +
+        "<br><br>Als je nou toch nog meer wil weten, dan zou je een poging kunnen wagen op FB, of kunnen kijken wat er onder de derde knop te vinden is. 😉" +
         "<a class='button is-info is-fb btn-round is-pulled-right' href='https://www.facebook.com/grunsfrans' target='_blank'><i class='fab fa-facebook-f'></i></a> ";
     $('#info').html(html);
 }

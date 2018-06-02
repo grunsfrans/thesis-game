@@ -111,7 +111,7 @@ class GameController extends Controller{
 
     private function getNextQuestion(){
         $target_word = $this->wordservice->getWordForStudent($this->student, $this->tutor->getHelpfulness());
-        $answer_type = $this->randomAnswerType();
+        $answer_type = $this->randomAnswerType($target_word);
         $question = $this->generateQuestion($target_word, $answer_type);
         return $question;
     }
@@ -262,8 +262,11 @@ class GameController extends Controller{
         $em->flush();
     }
 
-    private function randomAnswerType(){
-        $types = ["CORR_INCORR","PICK_CORR", "GUESS_SHUFF", "GUESS_DOTS", "GUESS_SHUFF", "GUESS_DOTS", "GUESS_DOTS", "GUESS_DOTS"];
+    private function randomAnswerType(Word $word){
+        $types = ["CORR_INCORR","PICK_CORR", "GUESS_SHUFF", "GUESS_DOTS", "GUESS_SHUFF", "PICK_CORR", "GUESS_DOTS", "GUESS_DOTS"];
+        if ($word->getLength() <= 4){ // too small for shuffling letters
+            $types[1] = $types[5] = "CORR_INCORR";
+        }
         return $types[rand(0, $this->game->getLevel() -1)];
     }
 
@@ -300,7 +303,7 @@ class GameController extends Controller{
     }
 
     private function checkPickCorrect($question, $answer){
-        $same_as_target = $this->target_word->getText() == strtolower($answer->answer);
+        $same_as_target = strtolower($this->target_word->getText()) == strtolower($answer->answer);
         if ($same_as_target){
             $response = 1;
         } else{
@@ -310,7 +313,7 @@ class GameController extends Controller{
     }
 
     private function checkGuessFull($question, $answer){
-        $same_as_target = $this->target_word->getText() == strtolower($answer->answer);
+        $same_as_target = strtolower($this->target_word->getText()) == strtolower($answer->answer);
         if ($same_as_target){
             $response = 1;
         } else{
