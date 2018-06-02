@@ -264,10 +264,11 @@ class GameController extends Controller{
 
     private function randomAnswerType(Word $word){
         $types = ["CORR_INCORR","PICK_CORR", "GUESS_SHUFF", "GUESS_DOTS", "GUESS_SHUFF", "PICK_CORR", "GUESS_DOTS", "GUESS_DOTS"];
-        if ($word->getLength() <= 4){ // too small for shuffling letters
+        if ($word->getLength() <= 3){ // too small for shuffling letters
             $types[1] = $types[5] = "CORR_INCORR";
         }
         return $types[rand(0, $this->game->getLevel() -1)];
+
     }
 
     /* Check answer types */

@@ -136,7 +136,8 @@ function elementsForAnswerType(answer_type, data) {
             interactions =  '<button id="next" class="button btn-round big is-success " type="button" onclick="checkPick()">' +
                             '<i class="fa fa-check"></i>' +
                             '<span class="btn-round-text">Controleer</span>' +
-                            '</button>';;
+                            '</button>';
+            console.log(data);
             $(data).each(function (i, word) {
                 options += '<div class="pick-one"><label><input type="radio" name="pick-one" value="'+word+'"><span>'+word+'</span></label></div>'
             })

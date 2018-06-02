@@ -73,13 +73,14 @@ class WordService
     public function shuffleLetters(Word $word, $numberOfLetters = 0){
         $numberOfLetters = $numberOfLetters < 2 ? $word->getLength() : $numberOfLetters;
         $shuffled = $word->getText();
-        $start = $word->getLength() > 3 ? 1 : 0;
-        $end = $word->getLength() > 3 ? $word->getLength()-3 : $word->getLength()-1;
+        $start = 0;
+        $end =  $word->getLength()-1;
         $counter = 0;
         do {
             $counter++;
-            if ( $position = rand($start , $end) ){
-                $to_be_swapped = substr($shuffled, $position, rand(0, $numberOfLetters - $position - 1));
+            $position = rand($start+1 , $end-1);
+            if ( $position ){
+                $to_be_swapped = substr($shuffled, $position, rand(2, $numberOfLetters - $position ));
                 $shuffled = str_replace($to_be_swapped, str_shuffle($to_be_swapped), $shuffled);
             } else{
                 break;
@@ -100,7 +101,7 @@ class WordService
             }
         }
         if ($swapped == $word->getText()){
-            $swapped = $this->shuffleLetters($word, 2);
+            $swapped = $this->shuffleLetters($word);
         }
         return $swapped;
     }
