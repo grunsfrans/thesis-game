@@ -42,7 +42,7 @@ function showAnswerResult(answer, result) {
     }
     word = $( "#word" );
     word.html( result['answer'] );
-    answer_is_equal = result['answer']  == result['target']
+    answer_is_equal = result['answer'].toLowerCase()  == result['target'].toLowerCase()
     if (skipped){
         word.html( result['answer'] ).addClass( 'altcorrect');
     } else {

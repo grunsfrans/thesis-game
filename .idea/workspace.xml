@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99c6ed73-ea2f-4faf-9a10-df8f4aa05db9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/game/play.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/game/play.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Service/Tutor.php" afterPath="$PROJECT_DIR$/src/AppBundle/Service/Tutor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/game.js" afterPath="$PROJECT_DIR$/web/js/game.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,28 +47,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Student.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Student.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="139" column="30" lean-forward="false" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
+            <state relative-caret-position="261">
+              <caret line="49" column="19" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
               <folding>
-                <marker date="1527968662707" expanded="true" signature="2120:2131" ph="..." />
-                <marker date="1527968662707" expanded="true" signature="2401:2412" ph="..." />
-                <marker date="1527968662707" expanded="true" signature="2583:2597" ph="..." />
-                <marker date="1527968662707" expanded="true" signature="2772:2786" ph="..." />
-                <marker date="1527968662707" expanded="true" signature="2957:2971" ph="..." />
-                <marker date="1527968662707" expanded="true" signature="15373:15389" ph="..." />
+                <marker date="1528041866004" expanded="true" signature="2148:2159" ph="..." />
+                <marker date="1528041866004" expanded="true" signature="2429:2440" ph="..." />
+                <marker date="1528041866004" expanded="true" signature="2611:2625" ph="..." />
+                <marker date="1528041866004" expanded="true" signature="2800:2814" ph="..." />
+                <marker date="1528041866004" expanded="true" signature="2985:2999" ph="..." />
+                <marker date="1528041866004" expanded="true" signature="15401:15417" ph="..." />
               </folding>
             </state>
           </provider>
@@ -79,6 +69,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-113">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,28 +109,18 @@
       <file leaf-file-name="GameController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
+            <state relative-caret-position="707">
               <caret line="266" column="35" lean-forward="false" selection-start-line="266" selection-start-column="35" selection-end-line="266" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tutor.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tutor.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/Tutor.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/user/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="107" column="38" lean-forward="false" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -201,15 +201,15 @@
         <option value="$PROJECT_DIR$/app/Resources/views/game/landing.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/frontpage.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/security/login.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/user/show.html.twig" />
         <option value="$PROJECT_DIR$/web/css/game.css" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/User.orm.yml" />
-        <option value="$PROJECT_DIR$/web/js/game.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/GameController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/WordService.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/game/play.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/Tutor.php" />
+        <option value="$PROJECT_DIR$/web/js/game.js" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" />
       </list>
     </option>
   </component>
@@ -521,12 +521,12 @@
       <workItem from="1524470068334" duration="109583000" />
       <workItem from="1526111145470" duration="67080000" />
       <workItem from="1527901497144" duration="102000" />
-      <workItem from="1527932747070" duration="13293000" />
+      <workItem from="1527932747070" duration="14611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="478216000" />
+    <option name="totallyTimeSpent" value="479534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -567,13 +567,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -841,14 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="53" column="91" lean-forward="false" selection-start-line="53" selection-start-column="91" selection-end-line="53" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Student.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -889,21 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="139" column="30" lean-forward="false" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
-          <folding>
-            <marker date="1527968662707" expanded="true" signature="2120:2131" ph="..." />
-            <marker date="1527968662707" expanded="true" signature="2401:2412" ph="..." />
-            <marker date="1527968662707" expanded="true" signature="2583:2597" ph="..." />
-            <marker date="1527968662707" expanded="true" signature="2772:2786" ph="..." />
-            <marker date="1527968662707" expanded="true" signature="2957:2971" ph="..." />
-            <marker date="1527968662707" expanded="true" signature="15373:15389" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Service/WordService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -911,14 +881,6 @@
           <folding>
             <marker date="1527971521740" expanded="true" signature="847:907" ph="SELECT id FR... word" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="266" column="35" lean-forward="false" selection-start-line="266" selection-start-column="35" selection-end-line="266" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,6 +896,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="29" column="47" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/GameController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="266" column="35" lean-forward="false" selection-start-line="266" selection-start-column="35" selection-end-line="266" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="49" column="19" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding>
+            <marker date="1528041866004" expanded="true" signature="2148:2159" ph="..." />
+            <marker date="1528041866004" expanded="true" signature="2429:2440" ph="..." />
+            <marker date="1528041866004" expanded="true" signature="2611:2625" ph="..." />
+            <marker date="1528041866004" expanded="true" signature="2800:2814" ph="..." />
+            <marker date="1528041866004" expanded="true" signature="2985:2999" ph="..." />
+            <marker date="1528041866004" expanded="true" signature="15401:15417" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-113">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding />
         </state>
       </provider>

@@ -31,6 +31,9 @@ class UserController extends Controller {
     public function showAction(Request $request, User $id){
         $user = $this->getDoctrine()
             ->getRepository(User::class)->find($id);
+        if ($this->getUser() != $id){
+            return $this->redirectToRoute('game_landing');
+        }
 
 
         return $this->render('user/show.html.twig', [
