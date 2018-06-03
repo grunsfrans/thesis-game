@@ -397,7 +397,7 @@ function showMe() {
         "Ik ben 30 jaar oud, woon in Arnhem en werk bij <a href='http://flitsmeister.nl' target='_blank'> het meest flitsende bedrijf van Nederland</a>. <br>" +
         "Mijn vrijetijdsbesteding bestaat momenteel vooral uit het afronden van m'n studie. Meer hierover vind je onder de tweede knop.<br>" +
         "Het zou erg fijn zijn als je daar zometeen even gaat kijken. Als bedankje krijg je de mogelijkheid om proefpersoon te worden in mijn scriptieonderzoek." +
-        "<br><br> Ik zou je nog veel meer wiilen vertellen, maar daar heb ik nu echt de tijd niet voor. <br> En daarbij, zo interessant ben ik nu ook weer niet." +
+        "<br><br> Ik zou je nog veel meer willen vertellen, maar daar heb ik nu echt de tijd niet voor. <br> En daarbij, zo interessant ben ik nu ook weer niet." +
         "<br><br>Als je nou toch nog meer wil weten, dan zou je een poging kunnen wagen op FB, of kunnen kijken wat er onder de derde knop te vinden is. 😉" +
         "<a class='button is-info is-fb btn-round is-pulled-right' href='https://www.facebook.com/grunsfrans' target='_blank'><i class='fab fa-facebook-f'></i></a> ";
     $('#info').html(html);
