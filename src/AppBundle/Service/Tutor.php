@@ -27,7 +27,7 @@ class Tutor extends Controller {
     }
 
     public function welcomeStudent(){
-        if (count($this->student->getGames()) < 1){
+        if (count($this->student->getGames()) <= 1){
             $message = $this->getMessage( $this->control."WELCOME_INIT");
             $hint = $this->getMessage("WELCOME_INIT_HINT");
         } else if ($time= $this->student->getActiveGame()->getTimePlayed() > 3){
