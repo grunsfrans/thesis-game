@@ -409,7 +409,7 @@ function showThesis() {
         "Voor mijn Bachelorthesis heb ik een online 'educational game' (educatief spel) ontwikkeld waarmee ik het onderzoek" +
         " wil doen naar leerprestaties onder bepaalde invloeden.<br><br>" +
         "In het spel is het de bedoeling om binnen 5 minuten zoveel mogelijk Engelse woorden correct te beoordelen of te spellen.<br>" +
-        "Met elk goed andwoord scoor je punten. Als je genoeg punten haalt kom je in een hoger level en worden de woorden moeilijker.<br>" +
+        "Met elk goed antwoord scoor je punten. Als je genoeg punten haalt kom je in een hoger level en worden de woorden moeilijker.<br>" +
         "Het hoogst haalbare level is 8. Lukt het jou om dit te halen? Zo niet, dan kun je het gewoon nog eens proberen.   <br><br>" +
         "Zou jij, gewoon voor de uitdaging, of anders voor de actie: \"Help Frans aan een diploma\", mee willen doen aan mijn onderzoek? <br> Dankjewel!" +
         "<br><a class='button is-warning is-medium is-pulled-right is-semi-trans ' style='margin-top: 15px'" +
