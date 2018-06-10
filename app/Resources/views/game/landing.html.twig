@@ -8,21 +8,29 @@
        <div class=" has-text-centered container-alpha game-menu">
            <div class="blur"></div>
            <div class="content white">
-               {% if app.user %}
-                   <h3 class="title">Spel menu</h3>
-                   Welkom {% if app.user.student.games | length > 0 %} terug {% endif %} {{ app.user.userprofile.firstname }}
-                   <div class="button-list-vertical is-centered">
-                       <a class="button is-warning is-large" href="{{ path('game_new') }}">nieuw spel</a>
-                       {% if load_btn %}
-                           <a class="button is-success is-large" href="{{ path('game_play') }}" >speel verder</a>
-                       {% endif %}
-                       <a class="button is-info is-large" href="{{ path('user_show',{'id': app.user.id }) }}">jouw gegevens</a>
-                       <a class="button is-dark is-large" href="{{ path('logout') }}">uitloggen</a>
-                   </div>
+               {#{% if app.user %}#}
+                   {#<h3 class="title">Spel menu</h3>#}
+                   {#Welkom {% if app.user.student.games | length > 0 %} terug {% endif %} {{ app.user.userprofile.firstname }}#}
+                   {#<div class="button-list-vertical is-centered">#}
+                       {#<a class="button is-warning is-large" href="{{ path('game_new') }}">nieuw spel</a>#}
+                       {#{% if load_btn %}#}
+                           {#<a class="button is-success is-large" href="{{ path('game_play') }}" >speel verder</a>#}
+                       {#{% endif %}#}
+                       {#<a class="button is-info is-large" href="{{ path('user_show',{'id': app.user.id }) }}">jouw gegevens</a>#}
+                       {#<a class="button is-dark is-large" href="{{ path('logout') }}">uitloggen</a>#}
+                   {#</div>#}
 
-               {% else %}
-                   {{ render(controller('AppBundle:Security:login')) }}
-               {% endif %}
+               {#{% else %}#}
+                   {#{{ render(controller('AppBundle:Security:login')) }}#}
+               {#{% endif %}#}
+
+               <img src="{{ asset("img/tutors/8.png") }}" style="transform: scaleX(-1); height: 150px; margin-bottom: -5px" >
+               <div id="info" class="active has-text-centered">
+               <h3>Sorry</h3>
+                   <span> Het spel is tijdelijk gesloten. </span><br>
+                   <span>Zodra de resultaten van het onderzoek verwerkt zijn, zal het spel weer speelbaar zijn.</span><br><br>
+                   <a href="{{ path('frontpage') }}">Terug naar mijn website</a>
+               </div>
            </div>
        </div>
     </section>

@@ -20,7 +20,7 @@ game_new:
     defaults: { _controller: AppBundle:Game:newGame }
 game_play:
     path: /game/play
-    defaults: { _controller: AppBundle:Game:play }
+    defaults: { _controller: AppBundle:Game:landing }
 game_end:
     path: /game/end
     defaults: { _controller: AppBundle:Game:endGame }
